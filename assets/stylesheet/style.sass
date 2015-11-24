@@ -1,0 +1,144 @@
+// Variables
+$dark_red:    #8c010c
+$dark_red_rgb: 140 1 12
+$light_red:   #bc0e1d
+$dark_grey:   #313131
+$grey:        #b5b5b5
+$light_grey:  #dcdcdc
+
+$white:       #ffffff
+$black:       #000000
+
+$text_white:  #ffffff
+
+// Reset
+*
+  padding: 0
+  margin: 0
+
+body
+  width: 100%
+  overflow-x: hidden
+
+// Miscellaneous
+.no-margin
+  margin: 0 !important
+
+.no-padding
+  padding: 0 !important
+
+.container-capped
+  padding: 50px 60px
+
+.gmnoprint
+  opacity: 0
+
+.gm-style div:last-child a div
+  opacity: 0
+
+// Go To Top
+.go-to-top
+  width: 35px
+  height: 35px
+  position: fixed
+  display: table
+  right: 30px
+  bottom: 30px
+  text-align: center
+  background-color: rgba(49, 49, 49, 0.9)
+  border: 1px solid
+  border-color: rgba(255, 255, 255, 0.9)
+  transition: border-color 0.3s ease-in-out
+  -webkit-transition: border-color 0.3s ease-in-out
+  z-index: 1000000
+  i
+    display: table-cell
+    vertical-align: middle
+    color: $text_white
+    z-index: 1000
+    position: relative
+  .bg
+    position: absolute
+    background: rgba(255, 255, 255, 0.9)
+    top: 0
+    left: 0
+    width: 0%
+    height: 100%
+    transition: width 0.3s ease-in-out
+    -webkit-transition: width 0.3s ease-in-out
+.go-to-top:hover
+  border-color: rgba(49, 49, 49, 0.9)
+  i
+    color: $black
+  .bg
+    width: 100%
+
+// Typography
+h1
+  font-size: 44px
+  font-family: "Roboto", sans-serif
+h2
+  font-size: 36px
+  font-family: "Roboto", sans-serif
+h3
+  font-size: 24px
+  font-family: "Roboto", sans-serif
+h4
+  font-size: 18px
+  font-family: "Roboto", sans-serif
+span
+  font-size: 14px
+  font-family: "Roboto", sans-serif
+
+// Headline
+.headline
+  text-align: center
+  display: block
+  margin-bottom: 30px
+  h2
+    text-transform: uppercase
+    position: relative
+    display: inline-block
+    padding-left: 15px
+    padding-right: 15px
+    background: #ffffff
+    font-weight: 300
+    z-index: 10
+  hr
+    position: relative
+    max-width: 450px
+    margin: 0 auto
+    top: -20px
+    border-color: $dark_grey
+
+.subline
+  text-align: center
+  display: block
+  h3
+    font-weight: 300
+    margin-top: 30px
+  hr
+    max-width: 60px
+    margin: 0 auto
+    border-color: $dark_grey
+
+
+
+
+
+
+
+
+// Import parts
+@import "sass-parts/_menu"
+@import "sass-parts/_header"
+@import "sass-parts/_about-us"
+@import "sass-parts/_latest-work"
+@import "sass-parts/_work"
+@import "sass-parts/_facts"
+@import "sass-parts/_strategy"
+@import "sass-parts/_services"
+@import "sass-parts/_contact"
+@import "sass-parts/_link-block"
+@import "sass-parts/_buttons"
+@import "sass-parts/_footer"

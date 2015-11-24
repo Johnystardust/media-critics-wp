@@ -1,0 +1,74 @@
+#page-work
+  border-top: 10px solid $dark_grey
+  background: $dark_grey
+  overflow: hidden
+  .work-row
+    position: relative
+    z-index: 100000
+  .active
+    z-index: 100000 !important
+  .work-block
+    position: relative
+    z-index: 10000
+    left: 0
+    transition: left 0.3s ease-in-out
+    -webkit-transition: left 0.3s ease-in-out
+    cursor: pointer
+    .work-image
+      .work-overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 100%
+        background: rgba(49, 49, 49, 0.7)
+        transition: top 0.3s ease-in-out
+        -webkit-transition: top 0.3s ease-in-out
+        text-align: center
+        .overlay-inside
+          width: 100%
+          height: 100%
+          display: table
+          span
+            display: table-cell
+            vertical-align: middle
+            color: $text_white
+            h2
+              font-weight: 300
+            h4
+              font-weight: 300
+            hr
+              max-width: 45px
+              margin: 0 auto
+              margin-top: 20px
+              margin-bottom: 20px
+    .work-image:hover
+      .work-overlay
+        top: 0% !important
+
+
+  .work-info
+    z-index: 100000
+    position: absolute
+    width: 200%
+    height: 100%
+    top: 0
+    left: 300%
+    padding: 30px
+    background: $grey
+    color: $text_white
+    transition: left 0.3s ease-in-out
+    -webkit-transition: left 0.3s ease-in-out
+    h2
+      margin-top: 0
+      margin-bottom: 20px
+    .work-text
+      display: block
+      max-width: 80%
+      line-height: 27px
+    .button
+      position: absolute
+      bottom: 30px
+    .close-button
+      position: absolute
+      top: 30px
+      right: 30px

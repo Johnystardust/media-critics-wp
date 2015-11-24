@@ -1,0 +1,118 @@
+#header
+  height: 100vh
+  overflow: hidden
+  .slide-navigation
+    position: absolute
+    width: 100%
+    z-index: 1000
+    .slide-navigation-button
+      position: absolute
+      width: 33px
+      height: 70px
+      top: 275px
+      display: table
+      background: $dark_grey
+      text-align: center
+      cursor: pointer
+      .bg
+        position: absolute
+        background: $white
+        top: 0
+        left: 0
+        width: 0%
+        height: 100%
+        transition: width 0.3s ease-in-out
+        -webkit-transition: width 0.3s ease-in-out
+      i
+        position: relative
+        display: table-cell
+        color: $text_white
+        vertical-align: middle
+        transition: color 0.3s ease-in-out
+        -webkit-transition: color 0.3s ease-in-out
+    .slide-left
+      left: 30px
+    .slide-left:hover
+      .bg
+        width: 100%
+      i
+        color: $black
+
+    .slide-right
+      right: 30px
+    .slide-right:hover
+      .bg
+        width: 100%
+      i
+        color: $black
+
+
+  #slide-container
+    position: relative
+    margin-left: 0%
+    list-style-type: none
+    transition: margin-left 0.3s ease-in-out
+    -webkit-transition: margin-left 0.3s ease-in-out
+    .slide
+      position: relative
+      float: left
+      .overlay
+        position: absolute
+        top: 54%
+        left: 9%
+        .slide-title
+          display: inline-block
+          padding: 15px
+          background: $dark_grey
+          color: $text_white
+          h2
+            font-weight: 300
+        .slide-text
+          display: block
+          float: left
+          margin-top: 15px
+          padding: 15px
+          background: $dark_grey
+          color: $text_white
+        .slide-link
+          width: 50px
+          height: 50px
+          display: block
+          float: left
+          margin-top: 15px
+          margin-left: 15px
+          text-align: center
+          background: $dark_grey
+          position: relative
+          .bg
+            position: absolute
+            background: $white
+            top: 0
+            left: 0
+            width: 0%
+            height: 100%
+            transition: width 0.3s ease-in-out
+            -webkit-transition: width 0.3s ease-in-out
+          i
+            position: relative
+            z-index: 1000
+            top: 15px
+            color: $text_white
+            transition: color 0.3s ease-in-out
+            -webkit-transition: color 0.3s ease-in-out
+        .slide-link:hover
+          .bg
+            width: 100%
+          i
+            color: $black
+
+#header-small
+  max-height: 400px
+  overflow: hidden
+  .overlay
+    width: 100%
+    position: absolute
+    text-align: center
+    h1
+      font-weight: 300
+      margin-top: 130px

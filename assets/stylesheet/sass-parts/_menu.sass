@@ -1,0 +1,69 @@
+#menu
+  height: 50px
+  width: 100%
+  position: fixed
+  z-index: 1000000
+  background-color: transparent
+  border-bottom: 1px solid
+  border-bottom-color: transparent
+  transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
+  -webkit-transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
+
+  .logo
+    float: left
+    padding-left: 20px
+    h3
+      line-height: 50px
+      font-size: 27px
+      font-weight: 300
+      color: $text_white
+      float: left
+      margin-top: 0
+      margin-bottom: 0
+      padding-left: 20px
+      padding-right: 20px
+
+  .menu
+    padding-right: 20px
+    list-style-type: none
+    float: right
+    margin-bottom: 0
+    a
+      float: left
+      font-family: "Roboto", sans-serif
+      text-transform: uppercase
+      color: $text_white
+      font-weight: 300
+    a:hover
+      text-decoration: none
+    li
+      height: 50px
+      line-height: 50px
+      padding-left: 20px
+      padding-right: 20px
+      position: relative
+      .txt
+        z-index: 1000
+        position: relative
+        //font-size: 17px
+        color: $text_white
+        transition: color 0.3s ease-in-out
+        -webkit-transition: color 0.3s ease-in-out
+      .bg
+        position: absolute
+        background: rgba(255, 255, 255, 0.9)
+        top: 0
+        left: 0
+        width: 0%
+        height: 100%
+        transition: width 0.3s ease-in-out
+        -webkit-transition: width 0.3s ease-in-out
+    li:hover
+      .txt
+        color: $black
+      .bg
+        width: 100%
+
+.menu-active
+  background-color: rgba(49, 49, 49, 0.9) !important
+  border-bottom-color: rgba(255, 255, 255, 0.9) !important
