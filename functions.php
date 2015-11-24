@@ -60,3 +60,14 @@ function add_my_custom_styles(){
     wp_enqueue_style('fontello');
     wp_enqueue_style('stylesheet');
 }
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+|   Remove the main WYSIWYG editor.
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+add_action('init', 'init_remove_support',100);
+function init_remove_support(){
+    $post_type = 'page';
+    remove_post_type_support( $post_type, 'editor');
+}
