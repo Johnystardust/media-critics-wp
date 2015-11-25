@@ -9,7 +9,7 @@
  */
 ?>
 
-<div id="about-us" class="container-fluid container-capped">
+<div id="text-title-subtitle" class="container-fluid container-capped">
     <div class="row">
         <div class="col-md-12">
             <span class="headline">

@@ -38,6 +38,9 @@ if(get_field('page_content')):
             case 'maps':
                 get_template_part('includes/acf/parts/maps');
                 break;
+            case 'contact_form':
+                get_template_part('includes/acf/parts/contact');
+                break;
 
 
         endswitch;
