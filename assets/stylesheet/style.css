@@ -586,13 +586,15 @@ span {
       #footer ul li a:hover {
         text-decoration: none;
         color: #b5b5b5; }
-  #footer .social-links li {
-    float: right;
-    margin-right: 10px; }
-    #footer .social-links li a {
-      color: #ffffff; }
-      #footer .social-links li a i {
-        font-size: 29px; }
+  #footer .social-links {
+    margin-bottom: 0; }
+    #footer .social-links li {
+      float: right;
+      margin-right: 10px; }
+      #footer .social-links li a {
+        color: #ffffff; }
+        #footer .social-links li a i {
+          font-size: 29px; }
   #footer .credits {
     text-align: center;
     margin-top: 20px; }
