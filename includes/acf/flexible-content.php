@@ -23,6 +23,9 @@ if(get_field('page_content')):
             case 'text_title_subtitle':
                 get_template_part('includes/acf/parts/text-title-subtitle');
                 break;
+            case 'latest_work':
+                get_template_part('includes/acf/parts/latest-work');
+                break;
             case 'facts':
                 get_template_part('includes/acf/parts/facts');
                 break;
