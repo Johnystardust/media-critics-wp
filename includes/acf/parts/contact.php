@@ -11,7 +11,10 @@
 
 <div id="form" class="container-fluid container-capped">
     <div class="col-md-12">
-        <?php echo do_shortcode('[contact-form-7 id="293" title="Contactformulier 1"]'); ?>
+        <?php
+            $shortcode = get_sub_field('contact_form_shortcode');
+            echo do_shortcode($shortcode);
+        ?>
     </div>
 </div>
 

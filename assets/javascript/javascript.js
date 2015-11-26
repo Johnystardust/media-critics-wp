@@ -132,19 +132,4 @@ $(document).ready(function(){
         $('.gm-style div:last-child a div').css('opacity', 0);
         $('.gmnoprint').css('opacity', 0);
     });
-
-    /*
-    |-------------------------------------------------------------------------------------------------------------------
-    |   CountUp Waypoint Function
-    |-------------------------------------------------------------------------------------------------------------------
-    */
-    //var waypoint = new Waypoint({
-    //    element: document.getElementById('facts'),
-    //    handler: function() {
-    //        $('.timer').countTo('start');
-    //        $('.timer').removeClass('timer');
-    //    },
-    //    offset: 300
-    //});
-
 });

@@ -9,6 +9,24 @@
  */
 ?>
 
+<script>
+    $(document).ready(function(){
+        /*
+        |-------------------------------------------------------------------------------------------------------------------
+        |   CountUp Waypoint Function
+        |-------------------------------------------------------------------------------------------------------------------
+        */
+        var waypoint = new Waypoint({
+            element: document.getElementById('facts'),
+            handler: function() {
+                $('.timer').countTo('start');
+                $('.timer').removeClass('timer');
+            },
+            offset: 300
+        });
+    });
+</script>
+
 <div id="facts" class="container-fluid no-padding">
 
     <?php

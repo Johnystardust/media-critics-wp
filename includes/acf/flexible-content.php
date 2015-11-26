@@ -44,7 +44,9 @@ if(get_field('page_content')):
             case 'contact_form':
                 get_template_part('includes/acf/parts/contact');
                 break;
-
+            case 'call_back':
+                get_template_part('includes/acf/parts/call-back');
+                break;
 
         endswitch;
 

@@ -470,6 +470,23 @@ span {
     margin-top: 30px;
     margin-bottom: 30px; }
 
+#call-back {
+  background: #313131;
+  color: #ffffff; }
+  #call-back .row {
+    padding: 50px; }
+  #call-back .call-back-inner {
+    display: table;
+    margin: 0 auto;
+    position: relative; }
+    #call-back .call-back-inner h2 {
+      font-weight: 300;
+      line-height: 44px;
+      float: left; }
+    #call-back .call-back-inner .button {
+      float: left;
+      margin-left: 50px; }
+
 .button {
   position: relative;
   width: 200px;
