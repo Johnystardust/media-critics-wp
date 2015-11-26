@@ -12,8 +12,8 @@
 <div id="work" class="container-fluid no-padding">
 
     <?php
-    $i = 1;
-    $args = array('post_type' => 'portfolio', 'posts_per_page' => the_field('max_posts'));
+    $x = 1;
+    $args = array('post_type' => 'portfolio', 'posts_per_page' => 3);
     $the_query = new WP_Query($args);
     /*
     |----------------------------------------------------------------
@@ -23,45 +23,47 @@
     */
     if($the_query->have_posts()) {
 
-        while ($the_query->have_posts()) : $the_query->the_post(); ?>
+        while ($the_query->have_posts()) : $the_query->the_post();
 
-            <div class="work-block col-md-4 no-padding" data-number="<?php echo $i; ?>">
-                <div class="work-image">
-                    <img src="<?php the_field('thumb'); ?>" alt="" width="100%"/>
+            /*
+            |----------------------------------------------------------------
+            |   Get an work block.
+            |
+            |   The 'include(locate_template())' function is used so we can
+            |   use the $x parameter
+            |----------------------------------------------------------------
+            */
+            include(locate_template('includes/template-files/work-block.php'));
 
-                    <div class="work-overlay">
-                        <div class="overlay-inside">
-                            <span>
-                                <h2><?php the_title(); ?></h2>
-                                <hr/>
-                                <h4>Categorie <?php // the_category(); ?></h4>
-                            </span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="work-info">
-                    <h2><?php the_title(); ?></h2>
-                    <span class="work-text"><?php the_field('content'); ?></span>
+            /*
+            |----------------------------------------------------------------
+            |   Increment the variables.
+            |----------------------------------------------------------------
+            */
+            $x++;
 
-                    <a href="<?php the_permalink(); ?>" class="button"><span class="txt">Lees meer</span><span class="bg"></span></a>
-                    <a href="#" class="close-button"><i class="icon icon-cancel-1"></i><span class="bg"></span></a>
-                </div>
-            </div>
-
-            <?php
-            if($i > 2){
-                $i = 1;
-            }
-            else {
-                $i++;
-            }
-            ?>
-
-        <?php endwhile;
+        endwhile;
+        /*
+        |----------------------------------------------------------------
+        |   If the posts in a row is not 3 add a empty project div.
+        |----------------------------------------------------------------
+        */
+        if($i == 2 || $i == 5 || $i == 8 || $i == 11){
+            get_template_part('includes/template-files/work-block-empty');
+        }
+        if($i == 1 || $i == 4 || $i == 7 || $i == 10){
+            get_template_part('includes/template-files/work-block-empty');
+            get_template_part('includes/template-files/work-block-empty');
+        }
     }
     else {
-        echo 'Sorry no posts matched your criteria';
+        /*
+        |----------------------------------------------------------------
+        |   If there are no posts to display, display the no-posts div.
+        |----------------------------------------------------------------
+        */
+        get_template_part('includes/template-files/no-posts');
     }
 
     wp_reset_postdata();

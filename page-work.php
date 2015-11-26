@@ -65,31 +65,17 @@ get_header();
             if($i % 3 == 0){
                 echo '<div class="row no-margin work-row">';
             }
-            ?>
-            <div class="work-block col-md-4 no-padding" data-number="<?php echo $x; ?>">
-                <div class="work-image">
-                    <img src="<?php the_field('thumb'); ?>" alt="" width="100%"/>
 
-                    <div class="work-overlay">
-                        <div class="overlay-inside">
-                            <span>
-                                <h2><?php the_title(); ?></h2>
-                                <hr/>
-                                <h4>Categorie <?php // the_category(); ?></h4>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+            /*
+            |----------------------------------------------------------------
+            |   Get an work block.
+            |
+            |   The 'include(locate_template())' function is used so we can
+            |   use the $x parameter
+            |----------------------------------------------------------------
+            */
+            include(locate_template('includes/template-files/work-block.php'));
 
-                <div class="work-info">
-                    <h2><?php the_title(); ?></h2>
-                    <span class="work-text"><?php the_field('content'); ?></span>
-
-                    <a href="#" class="button"><span class="txt">Lees meer</span><span class="bg"></span></a>
-                    <a href="#" class="close-button"><i class="icon icon-cancel-1"></i><span class="bg"></span></a>
-                </div>
-            </div>
-            <?
             /*
             |----------------------------------------------------------------
             |   Increment the variables.
@@ -103,42 +89,24 @@ get_header();
             |   Place an closing div for the row if the $i number is 3.
             |----------------------------------------------------------------
             */
-            if($i % 3 == 0){
+            if($i % 3 == 0) {
                 echo '</div>';
                 $x = 1;
             }
-            ?>
 
-        <?php endwhile;
+        endwhile;
         /*
         |----------------------------------------------------------------
         |   If the posts in a row is not 3 add a empty project div.
         |----------------------------------------------------------------
         */
-        if($i == 5 || $i == 8 || $i == 11){
-            ?>
-            <div class="work-block-empty col-md-4 no-padding " data-number="<?php echo $x; ?>">
-                <div class="work-image">
-                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/empty-thumb.png' ?>" alt="" width="100%"/>
-                </div>
-            </div>
-            <?php
+        if($i == 2 || $i == 5 || $i == 8 || $i == 11){
+            get_template_part('includes/template-files/work-block-empty');
         }
-        if($i == 4 || $i == 7 || $i == 10){
-            ?>
-            <div class="work-block-empty col-md-4 no-padding " data-number="<?php echo $x; ?>">
-                <div class="work-image">
-                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/empty-thumb.png' ?>" alt="" width="100%"/>
-                </div>
-            </div>
-            <div class="work-block-empty col-md-4 no-padding " data-number="<?php echo $x; ?>">
-                <div class="work-image">
-                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/empty-thumb.png' ?>" alt="" width="100%"/>
-                </div>
-            </div>
-        <?php
+        if($i == 1 || $i == 4 || $i == 7 || $i == 10){
+            get_template_part('includes/template-files/work-block-empty');
+            get_template_part('includes/template-files/work-block-empty');
         }
-
 
         /*
         |----------------------------------------------------------------
@@ -151,7 +119,12 @@ get_header();
         }
     }
     else {
-        echo 'Sorry no posts matched your criteria';
+        /*
+        |----------------------------------------------------------------
+        |   If there are no posts to display, display the no-posts div.
+        |----------------------------------------------------------------
+        */
+        get_template_part('includes/template-files/no-posts');
     }
 
     wp_reset_postdata();

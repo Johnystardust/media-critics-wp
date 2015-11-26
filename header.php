@@ -21,4 +21,5 @@
 <body>
 
 
-<?php include_once('includes/theme-files/menu.php'); ?>
+<?php include_once('includes/template-files/menu.php'); ?>
+
