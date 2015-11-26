@@ -54,7 +54,7 @@ body
   border-color: rgba(255, 255, 255, 0.9)
   transition: border-color 0.3s ease-in-out
   -webkit-transition: border-color 0.3s ease-in-out
-  z-index: 1000000
+  z-index: 100000000
   i
     display: table-cell
     vertical-align: middle
@@ -76,6 +76,15 @@ body
     color: $black
   .bg
     width: 100%
+
+// Text container
+.container-capped
+  .text
+    max-width: 60%
+    margin: 0 auto
+    margin-top: 50px
+    line-height: 22px
+    letter-spacing: 1px
 
 // Typography
 h1

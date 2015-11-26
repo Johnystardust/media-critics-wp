@@ -36,8 +36,8 @@ function create_work_post_type() {
         'menu_position'         => 20,
         'supports'              => array(),
         'has_archive'           => true,
-        'taxonomies'            => array('category'),
         'menu_icon'             => 'dashicons-portfolio',
+        'taxonomies'            => array('category')
     );
     register_post_type( 'portfolio', $args);
 }

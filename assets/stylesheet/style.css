@@ -38,7 +38,7 @@ body {
   border-color: rgba(255, 255, 255, 0.9);
   transition: border-color 0.3s ease-in-out;
   -webkit-transition: border-color 0.3s ease-in-out;
-  z-index: 1000000; }
+  z-index: 100000000; }
   .go-to-top i {
     display: table-cell;
     vertical-align: middle;
@@ -61,6 +61,13 @@ body {
     color: #000000; }
   .go-to-top:hover .bg {
     width: 100%; }
+
+.container-capped .text {
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 22px;
+  letter-spacing: 1px; }
 
 h1 {
   font-size: 44px;

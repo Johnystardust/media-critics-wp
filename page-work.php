@@ -17,22 +17,8 @@ get_header();
 |   Header.
 |-----------------------------------------------------------------------------------------------------------------------
 */
-?>
-<div id="header-small" class="container-fluid no-padding">
-    <div class="overlay">
-        <span class="headline">
-            <h1><?php the_field('title'); ?></h1>
-        </span>
-         <span class="subline">
-            <hr/>
-            <h3><?php the_field('subtitle'); ?></h3>
-        </span>
-    </div>
+get_template_part('includes/template-files/header-small');
 
-    <img src="<?php the_field('image'); ?>" alt="" width="100%"/>
-</div>
-
-<?php
 /*
 |-----------------------------------------------------------------------------------------------------------------------
 |   Portfolio.
@@ -138,17 +124,7 @@ get_header();
 |   Link block.
 |-----------------------------------------------------------------------------------------------------------------------
 */
-?>
-<div id="link-block" class="container-fluid no-padding">
+get_template_part('includes/template-files/link-block');
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2><?php the_field('link_title'); ?></h2>
-            <hr/>
-            <a href="<?php the_field('link'); ?>" class="button"><span class="txt"><?php the_field('link_name'); ?></span><span class="bg"></span></a>
-        </div>
-    </div>
 
-</div>
-
-<?php get_footer();
+get_footer();
