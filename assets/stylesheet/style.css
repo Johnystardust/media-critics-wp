@@ -597,6 +597,19 @@ span {
 .close-button:hover .bg {
   width: 100%; }
 
+#post-menu {
+  text-align: center;
+  padding: 20px 0; }
+  #post-menu a {
+    color: #313131;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out; }
+  #post-menu a:hover {
+    text-decoration: none;
+    color: #b5b5b5; }
+  #post-menu i {
+    font-size: 17px; }
+
 #footer {
   background: #313131;
   border-top: 1px solid #ffffff;

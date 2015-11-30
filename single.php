@@ -21,10 +21,17 @@ if(have_posts()){
         */
         get_template_part('includes/template-files/header-small'); ?>
 
-
         <div id="content" class="container-fluid container-capped">
             <div class="row">
                 <div class="col-md-12">
+                    <span class="headline">
+                        <h2 class="no-margin"><?php the_field('headline'); ?></h2>
+                        <hr/>
+                    </span>
+                     <span class="subline">
+                        <hr/>
+                        <h3><?php the_field('subline'); ?></h3>
+                    </span>
 
                     <div class="text">
                         <?php the_field('content'); ?>
@@ -35,15 +42,22 @@ if(have_posts()){
 
         </div>
 
+
+
         <?php
+        /*
+        |----------------------------------------------------------------
+        |   Get the post-menu block.
+        |----------------------------------------------------------------
+        */
+        get_template_part('includes/template-files/post-menu');
+
         /*
         |----------------------------------------------------------------
         |   Get the link block.
         |----------------------------------------------------------------
         */
         get_template_part('includes/template-files/link-block');
-
-        //get_template_part('includes/acf/flexible-content');
 
     endwhile;
 }
