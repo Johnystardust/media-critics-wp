@@ -132,4 +132,24 @@ $(document).ready(function(){
         $('.gm-style div:last-child a div').css('opacity', 0);
         $('.gmnoprint').css('opacity', 0);
     });
+
+    /*
+    |-------------------------------------------------------------------------------------------------------------------
+    |   Call Back Function
+    |-------------------------------------------------------------------------------------------------------------------
+    */
+
+    $('.call-back-form').hide();
+
+    $('#call-back-activate').click(function(){
+        $('.call-back-inner').addClass('bounceOutRight');
+
+        setTimeout(function(){
+            $('.call-back-inner').hide();
+            $('.call-back-form').show();
+            $('.call-back-form').addClass('bounceInLeft');
+        }, 300);
+
+        return false;
+    });
 });
