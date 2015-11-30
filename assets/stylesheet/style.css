@@ -72,6 +72,8 @@ body {
 h1 {
   font-size: 44px;
   font-family: "Roboto", sans-serif; }
+  h1 small {
+    font-size: 30%; }
 
 h2 {
   font-size: 36px;
@@ -297,7 +299,11 @@ span {
     width: 100%;
     position: absolute;
     text-align: center; }
-    #header-small .overlay h1 {
+  #header-small .headline {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px; }
+    #header-small .headline h1 {
       font-weight: 300;
       margin-top: 130px; }
 
@@ -443,6 +449,8 @@ span {
   margin-top: 50px;
   line-height: 22px;
   letter-spacing: 1px; }
+  #text-title-subtitle .text ul {
+    margin-left: 15px; }
 
 #form {
   padding-top: 0; }
