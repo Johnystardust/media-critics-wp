@@ -13,6 +13,10 @@
     <div class="work-image">
         <img src="<?php the_field('thumb'); ?>" alt="" width="100%"/>
 
+        <div class="work-logo">
+            <img src="<?php the_field('thumb_logo'); ?>" />
+        </div>
+
         <div class="work-overlay">
             <div class="overlay-inside">
                 <span>

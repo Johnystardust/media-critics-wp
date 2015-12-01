@@ -5,8 +5,10 @@
   .work-row
     position: relative
     z-index: 100000
+
   .active
     z-index: 100000 !important
+
   .work-block
     position: relative
     z-index: 10000
@@ -15,6 +17,19 @@
     -webkit-transition: left 0.3s ease-in-out
     cursor: pointer
     .work-image
+      .work-logo
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0px
+        display: block
+        img
+          max-width: 80%
+          position: relative
+          margin: 0 auto
+          display: block
+          top: 33%
+
       .work-overlay
         position: absolute
         width: 100%

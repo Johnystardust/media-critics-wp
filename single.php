@@ -24,6 +24,7 @@ if(have_posts()){
         <div id="content" class="container-fluid container-capped">
             <div class="row">
                 <div class="col-md-12">
+
                     <span class="headline">
                         <h2 class="no-margin"><?php the_field('headline'); ?></h2>
                         <hr/>
@@ -39,10 +40,7 @@ if(have_posts()){
 
                 </div>
             </div>
-
         </div>
-
-
 
         <?php
         /*
@@ -54,10 +52,24 @@ if(have_posts()){
 
         /*
         |----------------------------------------------------------------
+        |   Get the work-footer block.
+        |----------------------------------------------------------------
+        */
+        get_template_part('includes/template-files/work-footer');
+
+        /*
+        |----------------------------------------------------------------
         |   Get the link block.
         |----------------------------------------------------------------
         */
         get_template_part('includes/template-files/link-block');
+
+        /*
+            |----------------------------------------------------------------
+            |   Get the latest-work block.
+            |----------------------------------------------------------------
+            */
+        get_template_part('includes/acf/parts/latest-work');
 
     endwhile;
 }

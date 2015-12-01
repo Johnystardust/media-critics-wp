@@ -7,9 +7,16 @@
  *
  * @package Media Critics
  */
+
+if('portfolio' == get_post_type()){
+    $border = 'style="border: none;"';
+}
+else {
+    $border = '';
+}
 ?>
 
-<div id="footer" class="container-fluid container-capped">
+<div id="footer" class="container-fluid container-capped" <?php echo $border; ?>>
     <div class="row">
 
         <div class="col-md-3 footer-widget">
