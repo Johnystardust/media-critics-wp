@@ -26,6 +26,10 @@ get_template_part('includes/template-files/header-small');
 */
 ?>
 <div id="page-work" class="container-fluid no-padding">
+    <div class="row">
+
+    </div>
+
 
     <?php
     $i = 0;

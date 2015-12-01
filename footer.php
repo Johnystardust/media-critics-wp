@@ -31,31 +31,31 @@
                 $facebook = get_field('facebook', 'option');
                 if(!empty($facebook)){
                     ?>
-                    <li><a href="<?php the_field('facebook', 'option'); ?>"><i class="icon icon-facebook-circled"></i></a></li>
+                    <li><a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><i class="icon icon-facebook-circled"></i></a></li>
                     <?php
                 }
                 $linked_in = get_field('linked_in', 'option');
                 if(!empty($linked_in)){
                     ?>
-                    <li><a href="<?php the_field('linked_in', 'option'); ?>"><i class="icon icon-linkedin-circled"></i></a></li>
+                    <li><a href="<?php the_field('linked_in', 'option'); ?>" target="_blank"><i class="icon icon-linkedin-circled"></i></a></li>
                 <?php
                 }
                 $twitter = get_field('twitter', 'option');
                 if(!empty($twitter)){
                     ?>
-                    <li><a href="<?php the_field('twitter', 'option'); ?>"><i class="icon icon-twitter-circled"></i></a></li>
+                    <li><a href="<?php the_field('twitter', 'option'); ?>" target="_blank"><i class="icon icon-twitter-circled"></i></a></li>
                 <?php
                 }
                 $tumblr = get_field('tumblr', 'option');
                 if(!empty($tumblr)){
                     ?>
-                    <li><a href="<?php the_field('tumblr', 'option'); ?>"><i class="icon icon-tumblr-circled"></i></a></li>
+                    <li><a href="<?php the_field('tumblr', 'option'); ?>" target="_blank"><i class="icon icon-tumblr-circled"></i></a></li>
                 <?php
                 }
                 $google = get_field('google_plus', 'option');
                 if(!empty($google)){
                     ?>
-                    <li><a href="<?php the_field('google_plus', 'option'); ?>"><i class="icon icon-gplus-circled"></i></a></li>
+                    <li><a href="<?php the_field('google_plus', 'option'); ?>" target="_blank"><i class="icon icon-gplus-circled"></i></a></li>
                 <?php
                 }
                 ?>

@@ -135,16 +135,8 @@ span {
   #menu .logo {
     float: left;
     padding-left: 20px; }
-    #menu .logo h3 {
-      line-height: 50px;
-      font-size: 27px;
-      font-weight: 300;
-      color: #ffffff;
-      float: left;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 20px;
-      padding-right: 20px; }
+    #menu .logo img {
+      height: 47px; }
   #menu .menu {
     padding-right: 20px;
     list-style-type: none;

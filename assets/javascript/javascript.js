@@ -1,5 +1,5 @@
 /**
- * Created by Tim on 11/18/2015.
+ * Created by Tim van der Slik on 11/18/2015.
  */
 $(document).ready(function(){
     /*

@@ -17,7 +17,7 @@
 
 <div id="menu">
     <div class="logo">
-        <a href="<?php get_home_url(); ?>"><h3>Media Critics</h3></a>
+        <a href="<?php get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo-menu-media-critics.png' ?>"/></a>
     </div>
 
     <?php
