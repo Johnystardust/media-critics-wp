@@ -13,7 +13,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Media Critics</title>
+    <title><?php echo get_the_title(); ?> | Media Critics</title>
 
     <?php wp_head(); ?>
 </head>

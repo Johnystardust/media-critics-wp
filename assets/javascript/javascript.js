@@ -56,7 +56,7 @@ $(document).ready(function(){
     |   Close the work-info
     |-------------------------------------------------------------------------------------------------------------------
     */
-    $('.close-button').click(function(){
+    $('.button-close-work').click(function(){
         /*
         |----------------------------------------------------------------
         |   Reset the info window if set, and remove the active class.
@@ -71,7 +71,7 @@ $(document).ready(function(){
 
     /*
     |-------------------------------------------------------------------------------------------------------------------
-    |   Hover Function
+    |   Strategy Points Hover Function
     |-------------------------------------------------------------------------------------------------------------------
     */
     $('.strategy-point').hover(function(){
@@ -138,16 +138,57 @@ $(document).ready(function(){
     |   Call Back Function
     |-------------------------------------------------------------------------------------------------------------------
     */
-
     $('.call-back-form').hide();
+    $('.button-callback').hide();
 
+    /*
+    |----------------------------------------------------------------
+    |   Show the callback form.
+    |----------------------------------------------------------------
+    */
     $('#call-back-activate').click(function(){
+        // Start the animation to slide the intro out
         $('.call-back-inner').addClass('bounceOutRight');
 
         setTimeout(function(){
+            // After the intro animation is stopped hide and remove the element's class
             $('.call-back-inner').hide();
+            $('.call-back-inner').removeClass('bounceOutRight');
+
+            // Show the form and add the animation class
             $('.call-back-form').show();
             $('.call-back-form').addClass('bounceInLeft');
+            $('.button-callback').show();
+            $('.button-callback').addClass('bounceInRight');
+        }, 300);
+
+        return false;
+    });
+
+    /*
+    |----------------------------------------------------------------
+    |   Hide the callback form.
+    |----------------------------------------------------------------
+    */
+    $('.button-callback').click(function(){
+        // Remove the animation class from the form
+        $('.call-back-form').removeClass('bounceInLeft');
+        $('.button-callback').removeClass('bounceInRight');
+
+        // Add the new animation class to the form
+        $('.call-back-form').addClass('bounceOutLeft');
+        $('.button-callback').addClass('bounceOutRight');
+
+        setTimeout(function(){
+            // After the intro animation is stopped hide and remove the element's class
+            $('.call-back-form').hide();
+            $('.call-back-form').removeClass('bounceOutLeft');
+            $('.button-callback').hide();
+            $('.button-callback').removeClass('bounceOutRight');
+
+            // Add the new animation class to the element and show it
+            $('.call-back-inner').show();
+            $('.call-back-inner').addClass('bounceInRight');
         }, 300);
 
         return false;

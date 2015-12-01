@@ -26,5 +26,7 @@
             </div>
 
         </div>
+
+        <a href="#" class="close-button button-callback animated"><i class="icon icon-cancel-1"></i><span class="bg"></span></a>
     </div>
 </div>

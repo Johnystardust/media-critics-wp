@@ -29,6 +29,6 @@
         <span class="work-text"><?php the_field('content'); ?></span>
 
         <a href="<?php the_permalink(); ?>" class="button"><span class="txt">Lees meer</span><span class="bg"></span></a>
-        <a href="#" class="close-button"><i class="icon icon-cancel-1"></i><span class="bg"></span></a>
+        <a href="#" class="close-button button-close-work"><i class="icon icon-cancel-1"></i><span class="bg"></span></a>
     </div>
 </div>

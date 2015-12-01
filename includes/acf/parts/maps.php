@@ -201,6 +201,14 @@
             };
 
             var map = new google.maps.Map(mapCanvas, options);
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Media Critics',
+                animation: google.maps.Animation.DROP
+            });
+
             var styledMapType = new google.maps.StyledMapType(styles, {name: 'Styled'});
             map.mapTypes.set('Styled', styledMapType);
         }
