@@ -87,6 +87,9 @@ h4 {
   font-size: 18px;
   font-family: "Roboto", sans-serif; }
 
+a {
+  font-family: "Roboto", sans-serif; }
+
 span {
   font-size: 14px;
   font-family: "Roboto", sans-serif; }
@@ -314,86 +317,99 @@ span {
   #page-work .work-block, #work .work-block, #page-work .work-block-empty, #work .work-block-empty {
     position: relative;
     z-index: 10000;
-    left: 0;
-    transition: left 0.3s ease-in-out;
-    -webkit-transition: left 0.3s ease-in-out;
-    cursor: pointer; }
-    #page-work .work-block .work-image .work-logo, #work .work-block .work-image .work-logo, #page-work .work-block-empty .work-image .work-logo, #work .work-block-empty .work-image .work-logo {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      display: block; }
-      #page-work .work-block .work-image .work-logo img, #work .work-block .work-image .work-logo img, #page-work .work-block-empty .work-image .work-logo img, #work .work-block-empty .work-image .work-logo img {
-        max-width: 80%;
-        position: relative;
-        margin: 0 auto;
-        display: block;
-        top: 33%; }
-    #page-work .work-block .work-image .work-overlay, #work .work-block .work-image .work-overlay, #page-work .work-block-empty .work-image .work-overlay, #work .work-block-empty .work-image .work-overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 100%;
-      background: rgba(49, 49, 49, 0.7);
-      transition: top 0.3s ease-in-out;
-      -webkit-transition: top 0.3s ease-in-out;
-      text-align: center; }
-      #page-work .work-block .work-image .work-overlay .overlay-inside, #work .work-block .work-image .work-overlay .overlay-inside, #page-work .work-block-empty .work-image .work-overlay .overlay-inside, #work .work-block-empty .work-image .work-overlay .overlay-inside {
+    height: 450px;
+    overflow: hidden; }
+    #page-work .work-block .work-image, #work .work-block .work-image, #page-work .work-block-empty .work-image, #work .work-block-empty .work-image {
+      height: 100%; }
+      #page-work .work-block .work-image .work-logo, #work .work-block .work-image .work-logo, #page-work .work-block-empty .work-image .work-logo, #work .work-block-empty .work-image .work-logo {
+        position: absolute;
         width: 100%;
         height: 100%;
-        display: table; }
-        #page-work .work-block .work-image .work-overlay .overlay-inside span, #work .work-block .work-image .work-overlay .overlay-inside span, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span, #work .work-block-empty .work-image .work-overlay .overlay-inside span {
-          display: table-cell;
-          vertical-align: middle;
-          color: #ffffff; }
-          #page-work .work-block .work-image .work-overlay .overlay-inside span h2, #work .work-block .work-image .work-overlay .overlay-inside span h2, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h2, #work .work-block-empty .work-image .work-overlay .overlay-inside span h2 {
-            font-weight: 300; }
-          #page-work .work-block .work-image .work-overlay .overlay-inside span h4, #work .work-block .work-image .work-overlay .overlay-inside span h4, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h4, #work .work-block-empty .work-image .work-overlay .overlay-inside span h4 {
-            font-weight: 300; }
-            #page-work .work-block .work-image .work-overlay .overlay-inside span h4 a, #work .work-block .work-image .work-overlay .overlay-inside span h4 a, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a, #work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a {
-              color: #ffffff;
-              transition: color 0.3s ease-in-out;
-              -webkit-transition: color 0.3s ease-in-out; }
-            #page-work .work-block .work-image .work-overlay .overlay-inside span h4 a:hover, #work .work-block .work-image .work-overlay .overlay-inside span h4 a:hover, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a:hover, #work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a:hover {
-              text-decoration: none;
-              color: #b5b5b5; }
-          #page-work .work-block .work-image .work-overlay .overlay-inside span hr, #work .work-block .work-image .work-overlay .overlay-inside span hr, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span hr, #work .work-block-empty .work-image .work-overlay .overlay-inside span hr {
-            max-width: 45px;
-            margin: 0 auto;
-            margin-top: 20px;
-            margin-bottom: 20px; }
-    #page-work .work-block .work-image:hover .work-overlay, #work .work-block .work-image:hover .work-overlay, #page-work .work-block-empty .work-image:hover .work-overlay, #work .work-block-empty .work-image:hover .work-overlay {
-      top: 0% !important; }
+        top: 0px;
+        display: block; }
+        #page-work .work-block .work-image .work-logo img, #work .work-block .work-image .work-logo img, #page-work .work-block-empty .work-image .work-logo img, #work .work-block-empty .work-image .work-logo img {
+          max-width: 80%;
+          position: relative;
+          margin: 0 auto;
+          display: block;
+          top: 33%; }
+    #page-work .work-block .work-content, #work .work-block .work-content, #page-work .work-block-empty .work-content, #work .work-block-empty .work-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      z-index: 1000;
+      transition: all 0.3s ease-in-out;
+      color: #ffffff; }
+      #page-work .work-block .work-content h4 a, #work .work-block .work-content h4 a, #page-work .work-block-empty .work-content h4 a, #work .work-block-empty .work-content h4 a {
+        color: #ffffff;
+        transition: color 0.3s ease-in-out;
+        -webkit-transition: color 0.3s ease-in-out; }
+      #page-work .work-block .work-content h4 a:hover, #work .work-block .work-content h4 a:hover, #page-work .work-block-empty .work-content h4 a:hover, #work .work-block-empty .work-content h4 a:hover {
+        text-decoration: none;
+        color: #b5b5b5; }
+      #page-work .work-block .work-content hr, #work .work-block .work-content hr, #page-work .work-block-empty .work-content hr, #work .work-block-empty .work-content hr {
+        max-width: 45px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px; }
+    #page-work .work-block .work-more, #work .work-block .work-more, #page-work .work-block-empty .work-more, #work .work-block-empty .work-more {
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      z-index: 100;
+      width: 100%;
+      text-align: center;
+      transition: all 0.3s ease-in-out; }
+      #page-work .work-block .work-more span, #work .work-block .work-more span, #page-work .work-block-empty .work-more span, #work .work-block-empty .work-more span {
+        display: inline-block; }
+        #page-work .work-block .work-more span .txt, #work .work-block .work-more span .txt, #page-work .work-block-empty .work-more span .txt, #work .work-block-empty .work-more span .txt {
+          display: table-cell !important; }
+    #page-work .work-block .work-category, #work .work-block .work-category, #page-work .work-block-empty .work-category, #work .work-block-empty .work-category {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 0;
+      z-index: 100;
+      color: #ffffff;
+      opacity: 0;
+      transition: all 0.3s ease-in-out; }
+      #page-work .work-block .work-category a, #work .work-block .work-category a, #page-work .work-block-empty .work-category a, #work .work-block-empty .work-category a {
+        font-weight: 300;
+        color: #ffffff;
+        transition: color 0.3s ease-in-out;
+        -webkit-transition: color 0.3s ease-in-out;
+        text-transform: uppercase;
+        position: relative;
+        top: 2px; }
+      #page-work .work-block .work-category a:hover, #work .work-block .work-category a:hover, #page-work .work-block-empty .work-category a:hover, #work .work-block-empty .work-category a:hover {
+        text-decoration: none;
+        color: #b5b5b5; }
+    #page-work .work-block .work-fade, #work .work-block .work-fade, #page-work .work-block-empty .work-fade, #work .work-block-empty .work-fade {
+      height: 100%;
+      width: 100%;
+      background: #0099b7;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease-in-out; }
+  #page-work .work-block:hover .work-content, #work .work-block:hover .work-content, #page-work .work-block-empty:hover .work-content, #work .work-block-empty:hover .work-content {
+    opacity: 1;
+    top: 19%; }
+  #page-work .work-block:hover .work-more, #work .work-block:hover .work-more, #page-work .work-block-empty:hover .work-more, #work .work-block-empty:hover .work-more {
+    opacity: 1;
+    bottom: 21%; }
+  #page-work .work-block:hover .work-category, #work .work-block:hover .work-category, #page-work .work-block-empty:hover .work-category, #work .work-block-empty:hover .work-category {
+    opacity: 1;
+    bottom: 10%; }
+  #page-work .work-block:hover .work-fade, #work .work-block:hover .work-fade, #page-work .work-block-empty:hover .work-fade, #work .work-block-empty:hover .work-fade {
+    opacity: 0.8; }
   #page-work .work-block-empty, #work .work-block-empty {
     cursor: default;
     background: #313131; }
-  #page-work .work-info, #work .work-info {
-    z-index: 100000;
-    position: absolute;
-    width: 200%;
-    height: 100%;
-    top: 0;
-    left: 300%;
-    padding: 30px;
-    background: #b5b5b5;
-    color: #ffffff;
-    transition: left 0.3s ease-in-out;
-    -webkit-transition: left 0.3s ease-in-out; }
-    #page-work .work-info h2, #work .work-info h2 {
-      margin-top: 0;
-      margin-bottom: 20px; }
-    #page-work .work-info .work-text, #work .work-info .work-text {
-      display: block;
-      max-width: 80%;
-      line-height: 27px; }
-    #page-work .work-info .button, #work .work-info .button {
-      position: absolute;
-      bottom: 30px; }
-    #page-work .work-info .close-button, #work .work-info .close-button {
-      position: absolute;
-      top: 30px;
-      right: 30px; }
 
 #facts {
   background: #313131; }

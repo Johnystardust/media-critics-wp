@@ -26,14 +26,8 @@ get_template_part('includes/template-files/header-small');
 */
 ?>
 <div id="page-work" class="container-fluid no-padding">
-    <div class="row">
-
-    </div>
-
-
     <?php
     $i = 0;
-    $x = 1;
     $args = array('post_type' => 'portfolio');
     $the_query = new WP_Query($args);
     $posts = $the_query->post_count;
@@ -52,7 +46,7 @@ get_template_part('includes/template-files/header-small');
             |   Place an opening div for the row if the $i number is 0.
             |----------------------------------------------------------------
             */
-            if($i % 3 == 0){
+            if($i % 2 == 0){
                 echo '<div class="row no-margin work-row">';
             }
 
@@ -72,31 +66,17 @@ get_template_part('includes/template-files/header-small');
             |----------------------------------------------------------------
             */
             $i++;
-            $x++;
 
             /*
             |----------------------------------------------------------------
             |   Place an closing div for the row if the $i number is 3.
             |----------------------------------------------------------------
             */
-            if($i % 3 == 0) {
+            if($i % 2 == 0) {
                 echo '</div>';
-                $x = 1;
             }
 
         endwhile;
-        /*
-        |----------------------------------------------------------------
-        |   If the posts in a row is not 3 add a empty project div.
-        |----------------------------------------------------------------
-        */
-        if($i == 2 || $i == 5 || $i == 8 || $i == 11){
-            get_template_part('includes/template-files/work-block-empty');
-        }
-        if($i == 1 || $i == 4 || $i == 7 || $i == 10){
-            get_template_part('includes/template-files/work-block-empty');
-            get_template_part('includes/template-files/work-block-empty');
-        }
 
         /*
         |----------------------------------------------------------------
@@ -104,7 +84,7 @@ get_template_part('includes/template-files/header-small');
         |   are not a dividable by 3.
         |----------------------------------------------------------------
         */
-        if($i % 3 != 0){
+        if($i % 2 != 0){
             echo '</div>';
         }
     }

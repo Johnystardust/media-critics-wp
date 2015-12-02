@@ -13,7 +13,13 @@
 
     <?php
     $x = 1;
-    $args = array('post_type' => 'portfolio', 'posts_per_page' => 3);
+    $current_post = get_the_ID();
+    $args = array(
+        'post__not_in' => array($current_post),
+        'post_type' => 'portfolio',
+        'posts_per_page' => 2,
+    );
+
     $the_query = new WP_Query($args);
     /*
     |----------------------------------------------------------------
@@ -44,18 +50,6 @@
             $x++;
 
         endwhile;
-        /*
-        |----------------------------------------------------------------
-        |   If the posts in a row is not 3 add a empty project div.
-        |----------------------------------------------------------------
-        */
-        if($i == 2 || $i == 5 || $i == 8 || $i == 11){
-            get_template_part('includes/template-files/work-block-empty');
-        }
-        if($i == 1 || $i == 4 || $i == 7 || $i == 10){
-            get_template_part('includes/template-files/work-block-empty');
-            get_template_part('includes/template-files/work-block-empty');
-        }
     }
     else {
         /*
