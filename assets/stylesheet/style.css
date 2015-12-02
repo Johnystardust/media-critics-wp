@@ -351,6 +351,13 @@ span {
             font-weight: 300; }
           #page-work .work-block .work-image .work-overlay .overlay-inside span h4, #work .work-block .work-image .work-overlay .overlay-inside span h4, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h4, #work .work-block-empty .work-image .work-overlay .overlay-inside span h4 {
             font-weight: 300; }
+            #page-work .work-block .work-image .work-overlay .overlay-inside span h4 a, #work .work-block .work-image .work-overlay .overlay-inside span h4 a, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a, #work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a {
+              color: #ffffff;
+              transition: color 0.3s ease-in-out;
+              -webkit-transition: color 0.3s ease-in-out; }
+            #page-work .work-block .work-image .work-overlay .overlay-inside span h4 a:hover, #work .work-block .work-image .work-overlay .overlay-inside span h4 a:hover, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a:hover, #work .work-block-empty .work-image .work-overlay .overlay-inside span h4 a:hover {
+              text-decoration: none;
+              color: #b5b5b5; }
           #page-work .work-block .work-image .work-overlay .overlay-inside span hr, #work .work-block .work-image .work-overlay .overlay-inside span hr, #page-work .work-block-empty .work-image .work-overlay .overlay-inside span hr, #work .work-block-empty .work-image .work-overlay .overlay-inside span hr {
             max-width: 45px;
             margin: 0 auto;

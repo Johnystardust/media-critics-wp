@@ -22,7 +22,7 @@
                 <span>
                     <h2><?php the_title(); ?></h2>
                     <hr/>
-                    <h4>Categorie <?php // the_category(); ?></h4>
+                    <h4><?php the_category(' '); ?></h4>
                 </span>
             </div>
         </div>
