@@ -10,9 +10,8 @@
 ?>
 
 <div class="work-block col-md-6 no-padding">
-    <div class="work-image">
-        <img src="<?php the_field('thumb'); ?>" alt="" width="100%"/>
-
+    <?php $background = get_field('thumb'); ?>
+    <div class="work-image" style="background-image: url(<?php echo $background; ?>); ">
         <div class="work-logo">
             <img width="<?php echo the_field('logo_width').'%'; ?>" src="<?php the_field('thumb_logo'); ?>" />
         </div>

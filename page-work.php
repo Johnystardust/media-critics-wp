@@ -27,7 +27,6 @@ get_template_part('includes/template-files/header-small');
 ?>
 <div id="page-work" class="container-fluid no-padding">
     <?php
-    $i = 0;
     $args = array('post_type' => 'portfolio');
     $the_query = new WP_Query($args);
     $posts = $the_query->post_count;
@@ -39,54 +38,20 @@ get_template_part('includes/template-files/header-small');
     */
     if($the_query->have_posts()) {
 
-        while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <?php
-            /*
-            |----------------------------------------------------------------
-            |   Place an opening div for the row if the $i number is 0.
-            |----------------------------------------------------------------
-            */
-            if($i % 2 == 0){
-                echo '<div class="row no-margin work-row">';
-            }
+        while ($the_query->have_posts()) : $the_query->the_post();
 
-            /*
-            |----------------------------------------------------------------
-            |   Get an work block.
-            |
-            |   The 'include(locate_template())' function is used so we can
-            |   use the $x parameter
-            |----------------------------------------------------------------
-            */
-            include(locate_template('includes/template-files/work-block.php'));
+            switch(get_field('sort')):
 
-            /*
-            |----------------------------------------------------------------
-            |   Increment the variables.
-            |----------------------------------------------------------------
-            */
-            $i++;
+                case 'normal':
+                    get_template_part('includes/template-files/work-block');
+                    break;
+                case 'featured':
+                    get_template_part('includes/template-files/work-block-featured');
+                    break;
 
-            /*
-            |----------------------------------------------------------------
-            |   Place an closing div for the row if the $i number is 3.
-            |----------------------------------------------------------------
-            */
-            if($i % 2 == 0) {
-                echo '</div>';
-            }
+            endswitch;
 
         endwhile;
-
-        /*
-        |----------------------------------------------------------------
-        |   Place an closing div for the row if the loop is over and
-        |   are not a dividable by 3.
-        |----------------------------------------------------------------
-        */
-        if($i % 2 != 0){
-            echo '</div>';
-        }
     }
     else {
         /*
