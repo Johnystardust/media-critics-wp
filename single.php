@@ -34,7 +34,7 @@ if(have_posts()){
                         <h3><?php the_field('subline'); ?></h3>
                     </span>
 
-                    <div class="text">
+                    <div class="content">
                         <?php the_field('content'); ?>
                     </div>
 
