@@ -9,6 +9,16 @@
  */
 ?>
 
+<script>
+
+
+
+    if($('#wpcf7-f400-p283-o2').find('.wpcf7-response-output').hasClass('wpcf7-validation-errors')){
+        alert('validation errors');
+    }
+
+</script>
+
 <div id="call-back" class="container-fluid no-padding">
     <div class="row">
         <div class="col-md-12 no-padding">

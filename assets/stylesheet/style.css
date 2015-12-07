@@ -142,7 +142,6 @@ span {
     float: right;
     margin-bottom: 0; }
     #menu .menu a {
-      font-family: "Roboto", sans-serif;
       text-transform: uppercase;
       color: #ffffff;
       font-weight: 300; }
@@ -488,6 +487,33 @@ span {
         vertical-align: middle;
         color: #313131; }
 
+#work-footer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 400px;
+  position: relative; }
+  #work-footer .footer-overlay {
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  #work-footer .text {
+    position: relative;
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+    color: #ffffff;
+    padding: 100px 0; }
+    #work-footer .text p {
+      line-height: 32px;
+      letter-spacing: 1px;
+      font-size: 18px;
+      font-weight: 300;
+      text-shadow: 1px 1px 1px #313131; }
+      #work-footer .text p strong {
+        font-weight: 500 !important; }
+
 #facts {
   background: #313131; }
   #facts .fact {
@@ -608,7 +634,7 @@ span {
     #call-back .call-back-form .form-control-white {
       background: #313131;
       color: #ffffff;
-      border-color: #ffffff !important;
+      border-color: #ffffff;
       border-radius: 0px;
       min-height: 44px; }
     #call-back .call-back-form .form-control-white:focus {
@@ -622,6 +648,12 @@ span {
     height: 44px;
     top: 50px;
     right: 50px; }
+  #call-back .wpcf7-not-valid {
+    border-color: #ff0000 !important; }
+  #call-back .wpcf7-response-output {
+    display: none; }
+  #call-back .wpcf7-validation-errors {
+    display: none; }
 
 .button {
   position: relative;
@@ -645,7 +677,9 @@ span {
       background: none;
       border: none;
       text-transform: uppercase;
-      color: inherit; }
+      color: inherit;
+      width: 100%;
+      height: 100%; }
   .button .bg {
     position: absolute;
     background: #ffffff;
@@ -685,7 +719,9 @@ span {
       background: none;
       border: none;
       text-transform: uppercase;
-      color: inherit; }
+      color: inherit;
+      width: 100%;
+      height: 100%; }
   .button-black .bg {
     position: absolute;
     background: #313131;
@@ -790,11 +826,6 @@ span {
       font-size: 11px;
       font-weight: 300; }
 
-#work-footer {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-
 #no-posts {
   background: #ffffff; }
   #no-posts .headline hr {
@@ -814,5 +845,11 @@ span {
   #form .form-control:focus {
     border-color: #b5b5b5;
     box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7); }
+  #form .wpcf7-not-valid {
+    border-color: #ff0000; }
+  #form .wpcf7-response-output {
+    display: none; }
+  #form .wpcf7-validation-errors {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */
