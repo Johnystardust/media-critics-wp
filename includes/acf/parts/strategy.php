@@ -33,7 +33,7 @@
                     <i class="icon <?php echo $strategy['icon']; ?>"></i>
                 </div>
                 <h3><?php echo $strategy['title']; ?></h3>
-                <span><?php echo $strategy['description']; ?></span>
+                <?php echo $strategy['description']; ?>
             </div>
             <?php
         }

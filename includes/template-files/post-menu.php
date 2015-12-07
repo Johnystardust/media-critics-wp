@@ -36,14 +36,18 @@ $next_adjacent_post     = get_adjacent_post(true, '', false);
             */
             if($previous_adjacent_post){
                 ?>
-                    <a href="<?php echo $prev_permalink; ?>"><i class="icon icon-left-open"></i></a>
+                    <a href="<?php echo $prev_permalink; ?>"><i class="icon icon-left-open"></i>Vorige</a>
                 <?php
             }
             ?>
         </div>
 
-        <div class="col-md-8">
-            <a href="<?php echo get_permalink(369); ?>"><i class="icon icon-th"></i></a>
+        <div class="col-md-4">
+            <a href="<?php echo get_permalink(369); ?>"><i class="icon icon-th"></i>Terug naar overzicht</a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="<?php the_field('site_link'); ?>" target="_blank">Bekijk website<i class="icon icon-link-2"></i></a>
         </div>
 
         <div class="col-md-2">
@@ -55,7 +59,7 @@ $next_adjacent_post     = get_adjacent_post(true, '', false);
             */
             if($next_adjacent_post){
                 ?>
-                    <a href="<?php echo $next_permalink; ?>"><i class="icon icon-right-open"></i></a>
+                    <a href="<?php echo $next_permalink; ?>">Volgende<i class="icon icon-right-open"></i></a>
                 <?php
             }
             ?>

@@ -126,17 +126,4 @@ $(document).ready(function(){
 
         return false;
     });
-
-    /*
-    |-------------------------------------------------------------------------------------------------------------------
-    |   Portfolio single, images hover
-    |-------------------------------------------------------------------------------------------------------------------
-    */
-    $('.content').find('a').hover(function(){
-        $(this).find('img').css('opacity', 0.6);
-        $(this).append('<div class="image-link"><span><i class="icon icon-link-2"></i></span></div>')
-    }, function(){
-        $(this).find('img').css('opacity', 1);
-        $(this).find('.image-link').remove();
-    });
 });

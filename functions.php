@@ -61,7 +61,7 @@ if( function_exists('acf_add_options_page') ) {
 
 /*
 |-----------------------------------------------------------------------------------------------------------------------
-|   This disables the filter where p tags are added automatically in the WYSIWYG editor.
+|   This disables the filter where p tags are added automatically in the WYSIWYG
 |-----------------------------------------------------------------------------------------------------------------------
 */
 remove_filter('acf_the_content', 'wpautop');

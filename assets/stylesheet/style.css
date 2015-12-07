@@ -64,28 +64,31 @@ html, body {
 
 h1 {
   font-size: 44px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
   h1 small {
     font-size: 30%; }
 
 h2 {
   font-size: 36px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 h3 {
   font-size: 24px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 h4 {
   font-size: 18px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 a {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
 
 span {
   font-size: 14px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .headline {
   text-align: center;
@@ -105,7 +108,7 @@ span {
     max-width: 450px;
     margin: 0 auto;
     top: -20px;
-    border-color: #313131; }
+    border-color: inherit; }
 
 .subline {
   text-align: center;
@@ -116,7 +119,7 @@ span {
   .subline hr {
     max-width: 60px;
     margin: 0 auto;
-    border-color: #313131; }
+    border-color: inherit; }
 
 #menu {
   height: 50px;
@@ -230,11 +233,20 @@ span {
     #header #slide-container .slide {
       position: relative;
       height: 100%;
-      float: left; }
+      float: left;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; }
       #header #slide-container .slide .overlay {
         position: absolute;
-        bottom: 10%;
-        left: 9%; }
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; }
+        #header #slide-container .slide .overlay .title-text {
+          position: absolute;
+          bottom: 120px;
+          left: 30px; }
         #header #slide-container .slide .overlay .slide-title {
           display: inline-block;
           padding: 15px;
@@ -279,6 +291,11 @@ span {
           width: 100%; }
         #header #slide-container .slide .overlay .slide-link:hover i {
           color: #000000; }
+        #header #slide-container .slide .overlay .prev-image {
+          position: absolute;
+          right: 30px;
+          bottom: 30px;
+          max-width: 50%; }
 
 #header-small {
   max-height: 400px;
@@ -295,7 +312,7 @@ span {
       font-weight: 300;
       margin-top: 130px; }
       #header-small .headline h1 small {
-        color: #313131;
+        color: inherit;
         font-weight: 300; }
 
 #page-work, #work {
@@ -431,34 +448,40 @@ span {
     max-width: 60%;
     display: block;
     margin: 0 auto;
-    line-height: 22px;
-    letter-spacing: 1px; }
-  .container-capped .content a:first-child {
+    line-height: 32px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 300; }
+    .container-capped .content p strong {
+      font-weight: 500 !important; }
+  .container-capped .content .lb-image:first-child {
     padding-top: 0; }
-  .container-capped .content a:last-child {
+  .container-capped .content .lb-image:last-child {
     padding-bottom: 0; }
-  .container-capped .content a {
+  .container-capped .content .lb-image {
+    pointer-events: none;
+    cursor: default;
     position: relative;
     max-width: 80%;
     margin: 0 auto;
     padding: 50px 0;
     display: block; }
-    .container-capped .content a img {
+    .container-capped .content .lb-image img {
       opacity: 1;
       transition: opacity 0.3s ease-in-out;
       width: 100%;
       height: auto !important; }
-    .container-capped .content a .image-link {
+    .container-capped .content .lb-image .image-link {
       position: absolute;
       top: 0;
       width: 100%;
       height: 100%;
       text-align: center; }
-      .container-capped .content a .image-link span {
+      .container-capped .content .lb-image .image-link span {
         display: table;
         width: 100%;
         height: 100%; }
-      .container-capped .content a .image-link i {
+      .container-capped .content .lb-image .image-link i {
         width: 100%;
         font-size: 40px;
         display: table-cell;
@@ -490,6 +513,8 @@ span {
   #strategy .strategy-point h3 {
     font-weight: 300;
     margin-top: 30px; }
+  #strategy .strategy-point p {
+    font-weight: 300; }
   #strategy .strategy-point .icon-wrapper {
     width: 100px;
     height: 100px;
@@ -524,15 +549,20 @@ span {
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0; }
+  #services .service p {
+    font-weight: 300; }
   #services .service .text-wrapper {
     padding-left: 55px; }
 
 #text-title-subtitle .text {
   max-width: 60%;
   margin: 0 auto;
-  margin-top: 50px;
-  line-height: 22px;
-  letter-spacing: 1px; }
+  margin-top: 50px; }
+  #text-title-subtitle .text p {
+    line-height: 32px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 300; }
   #text-title-subtitle .text ul {
     margin-left: 15px; }
 
@@ -715,7 +745,11 @@ span {
     text-decoration: none;
     color: #b5b5b5; }
   #post-menu i {
-    font-size: 17px; }
+    font-size: 17px;
+    position: relative;
+    top: 2px;
+    padding-left: 10px;
+    padding-right: 10px; }
 
 #footer {
   background: #313131;
@@ -755,6 +789,11 @@ span {
       font-family: "Roboto", sans-serif;
       font-size: 11px;
       font-weight: 300; }
+
+#work-footer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
 
 #no-posts {
   background: #ffffff; }

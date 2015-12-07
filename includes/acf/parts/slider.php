@@ -30,18 +30,22 @@
         */
         foreach(get_sub_field('slider') as $slide){
             ?>
-            <li class="slide">
+            <li class="slide" style="background-image: url(<?php echo $slide['image']; ?>)">
                 <div class="overlay">
-                    <span class="slide-title"><h2 class="no-margin"><?php echo $slide['title']; ?></h2></span><br/>
-                    <span class="slide-text"><?php echo $slide['description']; ?></span>
-                    <a href="#">
-                    <span class="slide-link">
-                        <i class="icon-right-open icon"></i>
-                        <span class="bg"></span>
-                    </span>
-                    </a>
+                    <div class="title-text">
+                        <span class="slide-title"><h2 class="no-margin"><?php echo $slide['title']; ?></h2></span><br/>
+                        <span class="slide-text"><?php echo $slide['description']; ?></span>
+                        <a href="<?php echo $slide['slide_link']; ?>">
+                            <span class="slide-link">
+                                <i class="icon-right-open icon"></i>
+                                <span class="bg"></span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <img class="prev-image" src="<?php echo $slide['prev_image']; ?>"/>
+                    
                 </div>
-                <?php echo wp_get_attachment_image($slide['image'], 'full'); ?>
             </li>
             <?php
         }

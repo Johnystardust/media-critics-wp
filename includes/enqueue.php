@@ -48,7 +48,7 @@ function add_my_custom_styles(){
     // register styles
     wp_register_style('bootstrap_css', get_stylesheet_directory_uri().'/assets/bootstrap/css/bootstrap.min.css');
     wp_register_style('animate', get_stylesheet_directory_uri().'/assets/animate-css/animate.css');
-    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,700,500');
+    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,700italic,600italic,800italic');
     wp_register_style('fontello', get_stylesheet_directory_uri().'/assets/fontello/fontello-embedded.css');
 
     wp_register_style('stylesheet', get_stylesheet_directory_uri().'/assets/stylesheet/style.css');

@@ -10,7 +10,7 @@
 ?>
 
 <div id="header-small" class="container-fluid no-padding">
-    <div class="overlay">
+    <div class="overlay" style="color: <?php the_field('text_color'); ?>; text-shadow: <?php the_field('text_shadow_color'); ?> 1px 1px 1px;">
         <?php
         /*
         |----------------------------------------------------------------

@@ -35,7 +35,7 @@
                 <h3><?php echo $service['title']; ?></h3>
 
                 <div class="text-wrapper">
-                    <span><?php echo $service['description']; ?></span>
+                    <?php echo $service['description']; ?>
                 </div>
             </div>
             <?php
