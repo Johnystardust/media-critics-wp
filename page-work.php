@@ -25,6 +25,21 @@ get_template_part('includes/template-files/header-small');
 |-----------------------------------------------------------------------------------------------------------------------
 */
 ?>
+<div class="container-fluid container-capped">
+    <span class="headline">
+        <h2 class="no-margin"><?php the_field('title_text'); ?></h2>
+        <hr/>
+    </span>
+     <span class="subline">
+        <hr/>
+        <h3><?php the_field('subtitle_text'); ?></h3>
+    </span>
+
+    <div class="text">
+        <p><?php the_field('content_text'); ?></p>
+    </div>
+</div>
+
 <div id="page-work" class="container-fluid no-padding">
     <?php
     $args = array('post_type' => 'portfolio');

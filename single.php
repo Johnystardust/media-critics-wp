@@ -65,10 +65,10 @@ if(have_posts()){
         get_template_part('includes/template-files/link-block');
 
         /*
-            |----------------------------------------------------------------
-            |   Get the latest-work block.
-            |----------------------------------------------------------------
-            */
+        |----------------------------------------------------------------
+        |   Get the latest-work block.
+        |----------------------------------------------------------------
+        */
         get_template_part('includes/acf/parts/latest-work');
 
     endwhile;

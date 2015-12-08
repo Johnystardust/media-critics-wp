@@ -39,6 +39,9 @@
       text-align: center
       opacity: 0
       z-index: 1000
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
       transition: all 0.3s ease-in-out
       color: $text_white
       h2
@@ -47,8 +50,10 @@
         //font-weight: 300
         a
           color: $text_white
-          transition: color 0.3s ease-in-out
           -webkit-transition: color 0.3s ease-in-out
+          -moz-transition: color 0.3s ease-in-out
+          -o-transition: color 0.3s ease-in-out
+          transition: color 0.3s ease-in-out
         a:hover
           text-decoration: none
           color: $grey
@@ -79,13 +84,19 @@
       z-index: 100
       color: $text_white
       opacity: 0
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
       transition: all 0.3s ease-in-out
       a
         font-weight: 300
         color: $text_white
-        transition: color 0.3s ease-in-out
         -webkit-transition: color 0.3s ease-in-out
+        -moz-transition: color 0.3s ease-in-out
+        -o-transition: color 0.3s ease-in-out
+        transition: color 0.3s ease-in-out
         text-transform: uppercase
+
         position: relative
         top: 2px
       a:hover
@@ -100,6 +111,9 @@
       position: absolute
       top: 0
       left: 0
+      -webkit-transition: opacity 0.3s ease-in-out
+      -moz-transition: opacity 0.3s ease-in-out
+      -o-transition: opacity 0.3s ease-in-out
       transition: opacity 0.3s ease-in-out
 
   .work-block:hover

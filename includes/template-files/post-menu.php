@@ -36,9 +36,15 @@ $next_adjacent_post     = get_adjacent_post(true, '', false);
             */
             if($previous_adjacent_post){
                 ?>
-                    <a href="<?php echo $prev_permalink; ?>"><i class="icon icon-left-open"></i>Vorige</a>
+                <a href="<?php echo $prev_permalink; ?>"><i class="icon icon-left-open"></i>Vorige</a>
                 <?php
             }
+            else {
+                ?>
+                <p class="no-link"><i class="icon icon-left-open"></i>Vorige</p>
+                <?php
+            }
+
             ?>
         </div>
 
@@ -59,7 +65,12 @@ $next_adjacent_post     = get_adjacent_post(true, '', false);
             */
             if($next_adjacent_post){
                 ?>
-                    <a href="<?php echo $next_permalink; ?>">Volgende<i class="icon icon-right-open"></i></a>
+                <a href="<?php echo $next_permalink; ?>">Volgende<i class="icon icon-right-open"></i></a>
+                <?php
+            }
+            else {
+                ?>
+                <p class="no-link">Volgende<i class="icon icon-right-open"></i></p>
                 <?php
             }
             ?>

@@ -3,8 +3,10 @@
   padding: 20px 0
   a
     color: $dark_grey
-    transition: color 0.3s ease-in-out
     -webkit-transition: color 0.3s ease-in-out
+    -moz-transition: color 0.3s ease-in-out
+    -o-transition: color 0.3s ease-in-out
+    transition: color 0.3s ease-in-out
   a:hover
     text-decoration: none
     color: $grey
@@ -14,3 +16,6 @@
     top: 2px
     padding-left: 10px
     padding-right: 10px
+
+  .no-link
+    color: $grey

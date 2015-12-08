@@ -6,9 +6,10 @@
   background-color: transparent
   border-bottom: 1px solid
   border-bottom-color: transparent
-  transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
   -webkit-transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
-
+  -moz-transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
+  -o-transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
+  transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out
   .logo
     float: left
     padding-left: 20px
@@ -39,8 +40,10 @@
         position: relative
         //font-size: 17px
         color: $text_white
-        transition: color 0.3s ease-in-out
         -webkit-transition: color 0.3s ease-in-out
+        -moz-transition: color 0.3s ease-in-out
+        -o-transition: color 0.3s ease-in-out
+        transition: color 0.3s ease-in-out
       .bg
         position: absolute
         background: rgba(255, 255, 255, 0.9)
@@ -48,8 +51,10 @@
         left: 0
         width: 0%
         height: 100%
-        transition: width 0.3s ease-in-out
         -webkit-transition: width 0.3s ease-in-out
+        -moz-transition: width 0.3s ease-in-out
+        -o-transition: width 0.3s ease-in-out
+        transition: width 0.3s ease-in-out
     li:hover
       .txt
         color: $black

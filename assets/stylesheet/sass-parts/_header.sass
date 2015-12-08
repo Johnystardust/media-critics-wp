@@ -1,5 +1,5 @@
 #header
-  height: 100vh
+  height: 100vh !important
   overflow: hidden
   .slide-navigation
     position: absolute
@@ -21,15 +21,19 @@
         left: 0
         width: 0%
         height: 100%
-        transition: width 0.3s ease-in-out
         -webkit-transition: width 0.3s ease-in-out
+        -moz-transition: width 0.3s ease-in-out
+        -o-transition: width 0.3s ease-in-out
+        transition: width 0.3s ease-in-out
       i
         position: relative
         display: table-cell
         color: $text_white
         vertical-align: middle
-        transition: color 0.3s ease-in-out
         -webkit-transition: color 0.3s ease-in-out
+        -moz-transition: color 0.3s ease-in-out
+        -o-transition: color 0.3s ease-in-out
+        transition: color 0.3s ease-in-out
     .slide-left
       left: 30px
     .slide-left:hover
@@ -52,8 +56,10 @@
     height: 100%
     margin-left: 0%
     list-style-type: none
-    transition: margin-left 0.3s ease-in-out
     -webkit-transition: margin-left 0.3s ease-in-out
+    -moz-transition: margin-left 0.3s ease-in-out
+    -o-transition: margin-left 0.3s ease-in-out
+    transition: margin-left 0.3s ease-in-out
     .slide
       position: relative
       height: 100%
@@ -102,15 +108,19 @@
             left: 0
             width: 0%
             height: 100%
-            transition: width 0.3s ease-in-out
             -webkit-transition: width 0.3s ease-in-out
+            -moz-transition: width 0.3s ease-in-out
+            -o-transition: width 0.3s ease-in-out
+            transition: width 0.3s ease-in-out
           i
             position: relative
             z-index: 1000
             top: 15px
             color: $text_white
-            transition: color 0.3s ease-in-out
             -webkit-transition: color 0.3s ease-in-out
+            -moz-transition: color 0.3s ease-in-out
+            -o-transition: color 0.3s ease-in-out
+            transition: color 0.3s ease-in-out
         .slide-link:hover
           .bg
             width: 100%

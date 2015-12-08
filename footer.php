@@ -32,7 +32,7 @@ else {
 
         <?php dynamic_sidebar('footer'); ?>
 
-        <div class="col-md-3 footer-widget">
+        <div class="col-md-3 footer-widget social-widget">
             <ul class="social-links">
                 <?php
                 $facebook = get_field('facebook', 'option');
