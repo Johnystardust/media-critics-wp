@@ -1,7 +1,47 @@
 /**
  * Created by Tim van der Slik on 11/18/2015.
  */
+/*
+|-------------------------------------------------------------------------------------------------------------------
+|   Run this function once whole page is loaded
+|-------------------------------------------------------------------------------------------------------------------
+*/
+$(window).bind("load", function() {
+    $('.preload-overlay').fadeOut(300);
+
+    setTimeout(function(){
+        $('.preload-left').addClass('loaded-left');
+        $('.preload-right').addClass('loaded-right');
+    }, 300);
+
+    // After the intro animation is stopped hide the element
+    setTimeout(function(){
+        $('#preloader').hide();
+    }, 600);
+});
+
 $(document).ready(function(){
+    /*
+    |-------------------------------------------------------------------------------------------------------------------
+    |   Animate preloader on link click.
+    |-------------------------------------------------------------------------------------------------------------------
+    */
+    $('a').click(function(){
+        if($(this).hasClass('preload-link')){
+
+            $('#preloader').show();
+
+            setTimeout(function(){
+                $('.preload-left').removeClass('loaded-left');
+                $('.preload-right').removeClass('loaded-right');
+            }, 300);
+
+            setTimeout(function(){
+                $('.preload-overlay').fadeIn(300);
+            }, 600);
+        }
+    });
+
     /*
     |-------------------------------------------------------------------------------------------------------------------
     |   Set Slider Height to 100%

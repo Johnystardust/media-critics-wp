@@ -92,3 +92,10 @@
 .icon-ok-1:before { content: '\e85a'; } /* '' */
 .icon-plus-1:before { content: '\e85b'; } /* '' */
 .icon-minus:before { content: '\e85c'; } /* '' */
+.icon-home:before { content: '\e85d'; } /* '' */
+.icon-spin1:before { content: '\e85e'; } /* '' */
+.icon-spin2:before { content: '\e85f'; } /* '' */
+.icon-spin3:before { content: '\e860'; } /* '' */
+.icon-spin4:before { content: '\e861'; } /* '' */
+.icon-spin6:before { content: '\e862'; } /* '' */
+.icon-spin5:before { content: '\e863'; } /* '' */

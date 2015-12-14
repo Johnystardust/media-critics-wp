@@ -22,6 +22,17 @@
 
 <body>
 
+    <div id="preloader">
+        <div class="preload-overlay">
+            <h1 class="no-margin">Media Critics</h1>
+            <i class="icon icon-spin4 animate-spin"></i>
+            <h3 class="no-margin">Even gedult alstublieft</h3>
+        </div>
+
+        <div class="preload preload-left"></div>
+        <div class="preload preload-right"></div>
+    </div>
+
 
 <?php include_once('includes/template-files/menu.php'); ?>
 
