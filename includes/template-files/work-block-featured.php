@@ -9,7 +9,7 @@
  */
 ?>
 
-<div class="work-block featured col-md-12 no-padding">
+<div class="work-block featured col-md-12 col-sm-12 no-padding">
     <?php $background = get_field('thumb'); ?>
     <div class="work-image" style="background-image: url(<?php echo $background; ?>); ">
         <div class="featured-inner">
@@ -22,7 +22,7 @@
     </div>
 
     <div class="featured-inner">
-        <div class="col-md-4 col">
+        <div class="col-md-4 col-sm-4 col">
             <div class="work-content">
                 <h2><?php the_field('headline'); ?></h2>
                 <hr/>
@@ -38,7 +38,7 @@
             <div class="work-category"><?php the_category(' | '); ?></div>
         </div>
 
-        <div class="col-md-8 col">
+        <div class="col-md-8 col-sm-4 col">
             <img src="<?php the_field('thumbnail_preview') ?>" />
         </div>
     </div>

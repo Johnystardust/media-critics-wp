@@ -142,44 +142,22 @@ span
     margin: 0 auto
     border-color: inherit
 
-// Preloader
-#preloader
-  width: 100%
-  height: 100%
-  position: fixed
-  top: 0
-  left: 0
-  z-index: 1000000000000
-  display: table
-  .preload-overlay
-    display: table-cell
-    vertical-align: middle
-    z-index: 10
-    position: relative
-    text-align: center
-    text-transform: uppercase
-    h3, h1
-      font-weight: 300
-    i
-      font-size: 30px
-      padding: 40px
-  .preload
-    width: 50%
-    height: 100%
-    position: absolute
-    top: 0
-    background: $white
-    transition: all 0.3s ease-in-out
-    -webkit-transition: all 0.3s ease-in-out
-  .preload-left
-    left: 0%
-  .loaded-left
-    left: -50%
-  .preload-right
-    right: 0%
-  .loaded-right
-    right: -50%
-
+.mobile
+  .work-content
+    opacity: 1 !important
+    top: 19% !important
+  .work-more
+    opacity: 1 !important
+    bottom: 21% !important
+  .work-category
+    opacity: 1 !important
+    bottom: 10% !important
+  .work-fade
+    opacity: 0.8 !important
+  .featured-inner
+    img
+      max-width: 100% !important
+      position: relative
 
 // Import parts
 @import "sass-parts/_menu"
@@ -198,4 +176,5 @@ span
 @import "sass-parts/_footer"
 @import "sass-parts/_error"
 @import "sass-parts/_form"
+@import "sass-parts/_preloader"
 

@@ -9,7 +9,7 @@
  */
 ?>
 
-<div class="work-block col-md-6 no-padding">
+<div class="work-block col-md-6 col-sm-6 no-padding">
     <?php $background = get_field('thumb'); ?>
     <div class="work-image" style="background-image: url(<?php echo $background; ?>); ">
         <div class="work-logo">

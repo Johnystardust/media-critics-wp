@@ -25,7 +25,7 @@ else {
                 <li><?php the_field('company_name', 'option'); ?></li>
                 <li><?php the_field('address', 'option'); ?></li>
                 <li><?php the_field('postal', 'option'); ?></li>
-                <li><i class="icon icon-post"></i><?php the_field('mail', 'option'); ?></li>
+                <li><a href="mailto:info@media-critics.nl"><i class="icon icon-post"></i><?php the_field('mail', 'option'); ?></a></li>
                 <li><i class="icon icon-phone"></i><?php the_field('tel', 'option'); ?></li>
             </ul>
         </div>

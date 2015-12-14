@@ -1,0 +1,40 @@
+.touch
+  #preloader
+    display: none !important
+
+#preloader
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1000000000000
+  display: table
+  .preload-overlay
+    display: table-cell
+    vertical-align: middle
+    z-index: 10
+    position: relative
+    text-align: center
+    text-transform: uppercase
+    h3, h1
+      font-weight: 300
+    i
+      font-size: 30px
+      padding: 40px
+  .preload
+    width: 50%
+    height: 100%
+    position: absolute
+    top: 0
+    background: $white
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+  .preload-left
+    left: 0%
+  .loaded-left
+    left: -50%
+  .preload-right
+    right: 0%
+  .loaded-right
+    right: -50%
