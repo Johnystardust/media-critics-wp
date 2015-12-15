@@ -23,6 +23,7 @@ function add_my_custom_scripts(){
     wp_register_script('count_to', get_stylesheet_directory_uri().'/assets/jquery/jquery.countTo.js');
     wp_register_script('waypoints', get_stylesheet_directory_uri().'/assets/jquery/jquery.waypoints.min.js');
     wp_register_script('bootstrap_js', get_stylesheet_directory_uri().'/assets/bootstrap/js/bootstrap.min.js');
+    wp_register_script('nice_scroll', get_stylesheet_directory_uri().'/assets/jquery/jquery.nicescroll.min.js');
 
     wp_register_script('slider', get_stylesheet_directory_uri().'/assets/javascript/slider.js');
     wp_register_script('menu', get_stylesheet_directory_uri().'/assets/javascript/menu.js');
@@ -33,6 +34,7 @@ function add_my_custom_scripts(){
     wp_enqueue_script('count_to');
     wp_enqueue_script('waypoints');
     wp_enqueue_script('bootstrap_js');
+    wp_enqueue_script('nice_scroll');
     wp_enqueue_script('slider');
     wp_enqueue_script('menu');
     wp_enqueue_script('javascript');

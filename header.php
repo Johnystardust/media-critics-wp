@@ -26,7 +26,7 @@
         <div class="preload-overlay">
             <h1 class="no-margin">Media Critics</h1>
             <i class="icon icon-spin4 animate-spin"></i>
-            <h3 class="no-margin">Even gedult alstublieft</h3>
+            <h3 class="no-margin">Even geduld alstublieft</h3>
         </div>
 
         <div class="preload preload-left"></div>

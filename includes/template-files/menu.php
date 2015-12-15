@@ -17,7 +17,10 @@
 
 <div id="menu">
     <div class="logo">
-        <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo-menu-media-critics.png' ?>"/></a>
+        <!-- big -->
+        <!--<a href="--><?php //echo get_home_url(); ?><!--"><img src="--><?php //echo get_stylesheet_directory_uri().'/assets/images/logo-menu-media-critics.png' ?><!--"/></a>-->
+        <!-- small -->
+        <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/menulogo.png' ?>"/></a>
     </div>
 
     <?php

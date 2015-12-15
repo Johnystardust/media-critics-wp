@@ -53,7 +53,23 @@ $next_adjacent_post     = get_adjacent_post(true, '', false);
         </div>
 
         <div class="col-md-4">
-            <a href="<?php the_field('site_link'); ?>" target="_blank">Bekijk website<i class="icon icon-link-2"></i></a>
+            <?php
+            /*
+            |----------------------------------------------------------------
+            |   If there is a link to the website show it.
+            |----------------------------------------------------------------
+            */
+            if(get_field('site_link')){
+                ?>
+                <a href="<?php the_field('site_link'); ?>" target="_blank">Bekijk website<i class="icon icon-link-2"></i></a>
+                <?php
+            }
+            else {
+                ?>
+                <p class="no-link">Bekijk website<i class="icon icon-link-2"></i></p>
+                <?php
+            }
+            ?>
         </div>
 
         <div class="col-md-2">

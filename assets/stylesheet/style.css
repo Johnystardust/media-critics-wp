@@ -279,6 +279,7 @@ span {
         height: 100%;
         width: 100%; }
         #header #slide-container .slide .overlay .title-text {
+          max-width: 45%;
           position: absolute;
           bottom: 120px;
           left: 30px; }
@@ -290,6 +291,7 @@ span {
           #header #slide-container .slide .overlay .slide-title h2 {
             font-weight: 300; }
         #header #slide-container .slide .overlay .slide-text {
+          max-width: 85%;
           display: block;
           float: left;
           margin-top: 15px;
@@ -301,11 +303,11 @@ span {
           height: 50px;
           display: block;
           float: left;
-          margin-top: 15px;
-          margin-left: 15px;
+          margin-left: 87%;
+          bottom: 0px;
           text-align: center;
           background: #313131;
-          position: relative; }
+          position: absolute; }
           #header #slide-container .slide .overlay .slide-link .bg {
             position: absolute;
             background: #ffffff;
@@ -488,7 +490,7 @@ span {
         max-width: 80%;
         position: absolute;
         bottom: 0px;
-        left: 10%; }
+        right: 0; }
   #page-work .work-block-empty, #work .work-block-empty {
     cursor: default;
     background: #313131; }
@@ -514,7 +516,7 @@ span {
     pointer-events: none;
     cursor: default;
     position: relative;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 50px 0;
     display: block; }
@@ -843,6 +845,7 @@ span {
 
 #post-menu {
   text-align: center;
+  height: 64px;
   padding: 20px 0; }
   #post-menu a {
     color: #313131;
