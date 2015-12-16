@@ -34,6 +34,12 @@ html, body {
 .gm-style div:last-child a div {
   opacity: 0; }
 
+::selection {
+  background: #4faba6; }
+
+::-moz-selection {
+  background: #4faba6; }
+
 .go-to-top {
   width: 35px;
   height: 35px;
@@ -90,7 +96,11 @@ h4 {
   font-family: "Open Sans", sans-serif; }
 
 a {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  color: #00ced1; }
+
+a:hover {
+  color: #109496; }
 
 p {
   font-family: "Open Sans", sans-serif; }
@@ -129,6 +139,31 @@ span {
     max-width: 60px;
     margin: 0 auto;
     border-color: inherit; }
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.col-xs-15 {
+  width: 20%;
+  float: left; }
+
+.col-sm-15 {
+  width: 20%;
+  float: left; }
+
+.col-md-15 {
+  width: 20%;
+  float: left; }
+
+.col-lg-15 {
+  width: 20%;
+  float: left; }
 
 .mobile .work-content {
   opacity: 1 !important;
@@ -281,7 +316,7 @@ span {
         #header #slide-container .slide .overlay .title-text {
           max-width: 45%;
           position: absolute;
-          bottom: 120px;
+          bottom: 50px;
           left: 30px; }
         #header #slide-container .slide .overlay .slide-title {
           display: inline-block;
@@ -400,15 +435,17 @@ span {
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       color: #ffffff; }
-      #page-work .work-block .work-content h4 a, #work .work-block .work-content h4 a, #page-work .work-block-empty .work-content h4 a, #work .work-block-empty .work-content h4 a {
-        color: #ffffff;
-        -webkit-transition: color 0.3s ease-in-out;
-        -moz-transition: color 0.3s ease-in-out;
-        -o-transition: color 0.3s ease-in-out;
-        transition: color 0.3s ease-in-out; }
-      #page-work .work-block .work-content h4 a:hover, #work .work-block .work-content h4 a:hover, #page-work .work-block-empty .work-content h4 a:hover, #work .work-block-empty .work-content h4 a:hover {
-        text-decoration: none;
-        color: #b5b5b5; }
+      #page-work .work-block .work-content h4, #work .work-block .work-content h4, #page-work .work-block-empty .work-content h4, #work .work-block-empty .work-content h4 {
+        line-height: 24px; }
+        #page-work .work-block .work-content h4 a, #work .work-block .work-content h4 a, #page-work .work-block-empty .work-content h4 a, #work .work-block-empty .work-content h4 a {
+          color: #ffffff;
+          -webkit-transition: color 0.3s ease-in-out;
+          -moz-transition: color 0.3s ease-in-out;
+          -o-transition: color 0.3s ease-in-out;
+          transition: color 0.3s ease-in-out; }
+        #page-work .work-block .work-content h4 a:hover, #work .work-block .work-content h4 a:hover, #page-work .work-block-empty .work-content h4 a:hover, #work .work-block-empty .work-content h4 a:hover {
+          text-decoration: none;
+          color: #b5b5b5; }
       #page-work .work-block .work-content hr, #work .work-block .work-content hr, #page-work .work-block-empty .work-content hr, #work .work-block-empty .work-content hr {
         max-width: 45px;
         margin: 0 auto;
@@ -516,7 +553,7 @@ span {
     pointer-events: none;
     cursor: default;
     position: relative;
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
     padding: 50px 0;
     display: block; }
@@ -855,7 +892,7 @@ span {
     transition: color 0.3s ease-in-out; }
   #post-menu a:hover {
     text-decoration: none;
-    color: #b5b5b5; }
+    color: #109496; }
   #post-menu i {
     font-size: 17px;
     position: relative;
@@ -895,7 +932,9 @@ span {
         transition: color 0.3s ease-in-out; }
       #footer ul li a:hover {
         text-decoration: none;
-        color: #b5b5b5; }
+        color: #109496; }
+  #footer .footer-contact-2 ul {
+    margin-top: 36px; }
   #footer .social-widget {
     float: right; }
   #footer .social-links {
@@ -930,6 +969,8 @@ span {
   #form form {
     margin: 0 auto;
     max-width: 60%; }
+  #form textarea {
+    resize: vertical; }
   #form .form-control {
     border: 1px solid #313131;
     border-radius: 0px;

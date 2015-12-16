@@ -21,6 +21,8 @@
     );
 
     $the_query = new WP_Query($args);
+
+    $post_count = $the_query->post_count;
     /*
     |----------------------------------------------------------------
     |   Check if the query returns any posts, if true render the
@@ -31,23 +33,19 @@
 
         while ($the_query->have_posts()) : $the_query->the_post();
 
+            if($post_count > 1){
+                get_template_part('includes/template-files/work-block');
+            }
+            else {
+                get_template_part('includes/template-files/work-block-featured');
+            }
+
+
             /*
             |----------------------------------------------------------------
             |   Get an work block.
-            |
-            |   The 'include(locate_template())' function is used so we can
-            |   use the $x parameter
             |----------------------------------------------------------------
             */
-            include(locate_template('includes/template-files/work-block.php'));
-
-
-            /*
-            |----------------------------------------------------------------
-            |   Increment the variables.
-            |----------------------------------------------------------------
-            */
-            $x++;
 
         endwhile;
     }

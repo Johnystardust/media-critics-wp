@@ -62,7 +62,7 @@ $(document).ready(function(){
     |-------------------------------------------------------------------------------------------------------------------
     */
     $('a').click(function(){
-        if($(this).attr('target') != '_blank' && $(this).attr('href') != '#'){
+        if($(this).attr('target') != '_blank' && $(this).attr('href') != '#' && $(this).attr('href') != 'mailto:info@media-critics.nl'){
 
             $('#preloader').show();
 

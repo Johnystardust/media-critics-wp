@@ -49,6 +49,12 @@ html, body
 .gm-style div:last-child a div
   opacity: 0
 
+// Set text selection color
+::selection
+  background: #4faba6
+::-moz-selection
+  background: #4faba6
+
 // Go To Top
 .go-to-top
   width: 35px
@@ -104,6 +110,9 @@ h4
   font-family: 'Open Sans', sans-serif
 a
   font-family: 'Open Sans', sans-serif
+  color: #00ced1
+a:hover
+  color: #109496
 p
   font-family: 'Open Sans', sans-serif
 span
@@ -142,6 +151,32 @@ span
     margin: 0 auto
     border-color: inherit
 
+// Bootstrap 5 equal columns
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15
+  position: relative
+  min-height: 1px
+  padding-right: 10px
+  padding-left: 10px
+.col-xs-15
+  width: 20%
+  float: left
+@media (min-width: 768px)
+.col-sm-15
+  width: 20%
+  float: left
+@media (min-width: 992px)
+.col-md-15
+  width: 20%
+  float: left
+@media (min-width: 1200px)
+.col-lg-15
+  width: 20%
+  float: left
+
+// if site is viewed on mobile screen
 .mobile
   .work-content
     opacity: 1 !important

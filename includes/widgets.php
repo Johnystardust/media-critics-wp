@@ -24,7 +24,7 @@ function tvds_add_widgets_init(){
         'name' 			=> __( 'Footer', 'media-critics' ),
         'id' 			=> 'footer',
         'description' 	=> __( 'Footer ruimte', 'media-critics' ),
-        'before_widget' => '<div id="%1$s" class="col-md-3 footer-widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="col-md-15 footer-widget %2$s">',
         'after_widget' 	=> '</div>',
         'before_title' 	=> '<h3>',
         'after_title' 	=> '</h3>',

@@ -13,7 +13,7 @@
     <?php $background = get_field('thumb'); ?>
     <div class="work-image" style="background-image: url(<?php echo $background; ?>); ">
         <div class="work-logo">
-            <img width="<?php echo the_field('logo_width').'%'; ?>" src="<?php the_field('thumb_logo'); ?>" />
+            <img width="<?php $percentage = get_field('logo_width') / 1.3; echo $percentage.'%'; ?>" src="<?php the_field('thumb_logo'); ?>" />
         </div>
     </div>
 

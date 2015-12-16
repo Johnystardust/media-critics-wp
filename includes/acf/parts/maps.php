@@ -14,10 +14,10 @@
     <script>
         window.onload = function(){
             /*
-             |----------------------------------------------------------------
-             |   Maps Initialize Function
-             |----------------------------------------------------------------
-             */
+            |----------------------------------------------------------------
+            |   Maps Initialize Function
+            |----------------------------------------------------------------
+            */
             var mapCanvas = document.getElementById('map-canvas');
             var myLatLng = new google.maps.LatLng(<?php the_sub_field('latlng'); ?>);
 

@@ -19,20 +19,28 @@ else {
 <div id="footer" class="container-fluid container-capped" <?php echo $border; ?>>
     <div class="row">
 
-        <div class="col-md-3 footer-widget">
+        <div class="col-md-15 footer-widget">
             <h3>Contact</h3>
             <ul>
                 <li><?php the_field('company_name', 'option'); ?></li>
                 <li><?php the_field('address', 'option'); ?></li>
                 <li><?php the_field('postal', 'option'); ?></li>
                 <li><a href="mailto:info@media-critics.nl"><i class="icon icon-post"></i><?php the_field('mail', 'option'); ?></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-15 footer-widget footer-contact-2">
+            <ul>
+                <li>KVK: <?php the_field('kvk_number', 'option'); ?></li>
+                <li>BTW: <?php the_field('btw_number', 'option'); ?></li>
+                <li>IBAN: <?php the_field('iban_number', 'option'); ?></li>
                 <li><i class="icon icon-phone"></i><?php the_field('tel', 'option'); ?></li>
             </ul>
         </div>
 
         <?php dynamic_sidebar('footer'); ?>
 
-        <div class="col-md-3 footer-widget social-widget">
+        <div class="col-md-15 footer-widget social-widget">
             <ul class="social-links">
                 <?php
                 $facebook = get_field('facebook', 'option');

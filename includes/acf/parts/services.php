@@ -24,9 +24,18 @@
     </div>
 
     <div class="row row-services">
-
         <?php
+        $i = 0;
+
         foreach(get_sub_field('services') as $service){
+            /*
+            |----------------------------------------------------------------
+            |   Add an opening div if the number '$i' is a multiple of 3
+            |----------------------------------------------------------------
+            */
+            if($i%3==0){
+                echo '<div class="row no-margin">';
+            }
             ?>
             <div class="col-md-4 service">
                 <div class="small-icon-wrapper">
@@ -39,6 +48,23 @@
                 </div>
             </div>
             <?php
+            $i++;
+            /*
+            |----------------------------------------------------------------
+            |   Add an closing div if the number '$i' is a multiple of 3
+            |----------------------------------------------------------------
+            */
+            if($i % 3 == 0){
+                echo '</div>';
+            }
+        }
+        /*
+        |----------------------------------------------------------------
+        |   Add an closing div if the last row isn't full
+        |----------------------------------------------------------------
+        */
+        if($i % 3 != 0){
+            echo '</div>';
         }
         ?>
 
