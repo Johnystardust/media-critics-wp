@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
 
-    $(window).scroll(function(e) {
+    $(window).scroll(function() {
         var $this = $(this),
             pos = $this.scrollTop();
 

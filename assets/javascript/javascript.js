@@ -36,24 +36,25 @@ $(document).ready(function(){
     |-------------------------------------------------------------------------------------------------------------------
     */
     var deviceAgent = navigator.userAgent.toLowerCase();
+    var $html       = $('html');
 
     if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
-        $('html').addClass('ios');
-        $('html').addClass('mobile');
+        $html.addClass('ios');
+        $html.addClass('mobile');
     }
 
     if (deviceAgent.match(/android/)) {
-        $('html').addClass('android');
-        $('html').addClass('mobile');
+        $html.addClass('android');
+        $html.addClass('mobile');
     }
 
     if (deviceAgent.match(/blackberry/)) {
-        $('html').addClass('blackberry');
-        $('html').addClass('mobile');
+        $html.addClass('blackberry');
+        $html.addClass('mobile');
     }
 
     if (deviceAgent.match(/(symbianos|^sonyericsson|^nokia|^samsung|^lg)/)) {
-        $('html').addClass('mobile');
+        $html.addClass('mobile');
     }
 
     /*
@@ -82,7 +83,7 @@ $(document).ready(function(){
     |   Set Slider Height to 100%
     |-------------------------------------------------------------------------------------------------------------------
     */
-    $windowHeight = $(window).height();
+    var $windowHeight = $(window).height();
 
     $('#header').css('height', $windowHeight);
 
@@ -116,23 +117,24 @@ $(document).ready(function(){
     |   Go to top Function
     |-------------------------------------------------------------------------------------------------------------------
     */
-    $('.go-to-top').hide();
+    var $scroll_top = $('.go-to-top');
+    $scroll_top.hide();
 
     // Scroll to top fadeIn/fadeOut
     $(window).scroll(function(){
         if ($(this).scrollTop() > 400) {
-            $('.go-to-top').show();
-            $('.go-to-top').css('display', 'table !important');
-            $('.go-to-top').addClass('animated bounceInDown');
-            $('.go-to-top').removeClass('bounceOutDown');
+            $scroll_top.show();
+            $scroll_top.css('display', 'table !important');
+            $scroll_top.addClass('animated bounceInDown');
+            $scroll_top.removeClass('bounceOutDown');
         } else {
-            $('.go-to-top').addClass('bounceOutDown');
-            $('.go-to-top').removeClass('bounceInDown');
+            $scroll_top.addClass('bounceOutDown');
+            $scroll_top.removeClass('bounceInDown');
         }
     });
 
     // Scroll to top
-    $('.go-to-top').click(function(){
+    $scroll_top.click(function(){
         $("html, body").animate({ scrollTop: 0 },600);
         return false
     });
@@ -155,8 +157,12 @@ $(document).ready(function(){
     |   Call Back Function
     |-------------------------------------------------------------------------------------------------------------------
     */
-    $('.call-back-form').hide();
-    $('.button-callback').hide();
+    var $form_callback      = $('.call-back-form');
+    var $button_callback    = $('.button-callback');
+    var $inner_callback     = $('.call-back-inner');
+    
+    $form_callback.hide();
+    $button_callback.hide();
 
     /*
     |----------------------------------------------------------------
@@ -165,18 +171,18 @@ $(document).ready(function(){
     */
     $('#call-back-activate').click(function(){
         // Start the animation to slide the intro out
-        $('.call-back-inner').addClass('bounceOutRight');
+        $inner_callback.addClass('bounceOutRight');
 
         setTimeout(function(){
             // After the intro animation is stopped hide and remove the element's class
-            $('.call-back-inner').hide();
-            $('.call-back-inner').removeClass('bounceOutRight');
+            $inner_callback.hide();
+            $inner_callback.removeClass('bounceOutRight');
 
             // Show the form and add the animation class
-            $('.call-back-form').show();
-            $('.call-back-form').addClass('bounceInLeft');
-            $('.button-callback').show();
-            $('.button-callback').addClass('bounceInRight');
+            $form_callback.show();
+            $form_callback.addClass('bounceInLeft');
+            $button_callback.show();
+            $button_callback.addClass('bounceInRight');
         }, 300);
 
         return false;
@@ -187,25 +193,25 @@ $(document).ready(function(){
     |   Hide the callback form.
     |----------------------------------------------------------------
     */
-    $('.button-callback').click(function(){
+    $button_callback.click(function(){
         // Remove the animation class from the form
-        $('.call-back-form').removeClass('bounceInLeft');
-        $('.button-callback').removeClass('bounceInRight');
+        $form_callback.removeClass('bounceInLeft');
+        $button_callback.removeClass('bounceInRight');
 
         // Add the new animation class to the form
-        $('.call-back-form').addClass('bounceOutLeft');
-        $('.button-callback').addClass('bounceOutRight');
+        $form_callback.addClass('bounceOutLeft');
+        $button_callback.addClass('bounceOutRight');
 
         setTimeout(function(){
             // After the intro animation is stopped hide and remove the element's class
-            $('.call-back-form').hide();
-            $('.call-back-form').removeClass('bounceOutLeft');
-            $('.button-callback').hide();
-            $('.button-callback').removeClass('bounceOutRight');
+            $form_callback.hide();
+            $form_callback.removeClass('bounceOutLeft');
+            $button_callback.hide();
+            $button_callback.removeClass('bounceOutRight');
 
             // Add the new animation class to the element and show it
-            $('.call-back-inner').show();
-            $('.call-back-inner').addClass('bounceInRight');
+            $inner_callback.show();
+            $inner_callback.addClass('bounceInRight');
         }, 300);
 
         return false;

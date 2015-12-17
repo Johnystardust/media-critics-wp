@@ -23,13 +23,16 @@ $(document).ready(function(){
     var slide_width = (100 / slide_count) + "%";
 
     var slide_index = 0;
+    
+    var $slide_left = $('.slide-left');
+    var $slide_right = $('.slide-right');
 
     /*
     |----------------------------------------------------------------
     |   Hide the left button on start.
     |----------------------------------------------------------------
     */
-    $('.slide-left').hide();
+    $slide_left.hide();
 
     /*
     |----------------------------------------------------------------
@@ -75,7 +78,7 @@ $(document).ready(function(){
     |----------------------------------------------------------------
     */
     // Listener for the prev button
-    $('.slide-left').click(function(){
+    $slide_left.click(function(){
         // Clear the timer
         clearInterval(timer);
         timer = setInterval(slide_timer, 7000);
@@ -84,7 +87,7 @@ $(document).ready(function(){
     });
 
     // Listener for the next button
-    $('.slide-right').click(function(){
+    $slide_right.click(function(){
         // Clear the timer
         clearInterval(timer);
         timer = setInterval(slide_timer, 7000);
@@ -100,21 +103,21 @@ $(document).ready(function(){
     function slide(new_slide_index){
         // Show the prev button only when there is a prev slide
         if(new_slide_index < 1){
-            $('.slide-left').addClass('animated bounceOutLeft');
+            $slide_left.addClass('animated bounceOutLeft');
         }
         else {
-            $('.slide-left').show();
-            $('.slide-left').addClass('bounceInLeft');
-            $('.slide-left').removeClass('bounceOutLeft');
+            $slide_left.show();
+            $slide_left.addClass('bounceInLeft');
+            $slide_left.removeClass('bounceOutLeft');
         }
 
         // Show the next button only when there is a next slide
         if(new_slide_index >= (slide_count - 1)){
-            $('.slide-right').addClass('animated bounceOutRight');
+            $slide_right.addClass('animated bounceOutRight');
         }
         else {
-            $('.slide-right').addClass('bounceInRight');
-            $('.slide-right').removeClass('bounceOutRight');
+            $slide_right.addClass('bounceInRight');
+            $slide_right.removeClass('bounceOutRight');
         }
 
         // Set the animate distance
