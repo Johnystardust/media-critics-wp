@@ -32,21 +32,17 @@
     if($the_query->have_posts()) {
 
         while ($the_query->have_posts()) : $the_query->the_post();
-
+            /*
+            |----------------------------------------------------------------
+            |   Get an work block, if the post_count is 1 use the featured block
+            |----------------------------------------------------------------
+            */
             if($post_count > 1){
                 get_template_part('includes/template-files/work-block');
             }
             else {
                 get_template_part('includes/template-files/work-block-featured');
             }
-
-
-            /*
-            |----------------------------------------------------------------
-            |   Get an work block.
-            |----------------------------------------------------------------
-            */
-
         endwhile;
     }
     else {

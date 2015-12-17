@@ -13,14 +13,14 @@
 
     <div class="row">
         <div class="col-md-12">
-            <span class="headline">
+            <div class="headline">
                 <h2 class="no-margin"><?php the_sub_field('title'); ?></h2>
                 <hr/>
-            </span>
-            <span class="subline">
+            </div>
+            <div class="subline">
                 <hr/>
                 <h3><?php the_sub_field('subtitle'); ?></h3>
-            </span>
+            </div>
         </div>
     </div>
 

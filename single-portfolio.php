@@ -25,14 +25,14 @@ if(have_posts()){
             <div class="row">
                 <div class="col-md-12">
 
-                    <span class="headline">
+                    <div class="headline">
                         <h2 class="no-margin"><?php the_field('headline'); ?></h2>
                         <hr/>
-                    </span>
-                     <span class="subline">
+                    </div>
+                    <div class="subline">
                         <hr/>
                         <h3><?php the_field('subline'); ?></h3>
-                    </span>
+                    </div>
 
                     <div class="content">
                         <?php the_field('content'); ?>

@@ -26,14 +26,14 @@ get_template_part('includes/template-files/header-small');
 */
 ?>
 <div class="container-fluid container-capped">
-    <span class="headline">
+    <div class="headline">
         <h2 class="no-margin"><?php the_field('title_text'); ?></h2>
         <hr/>
-    </span>
-     <span class="subline">
+    </div>
+    <div class="subline">
         <hr/>
         <h3><?php the_field('subtitle_text'); ?></h3>
-    </span>
+    </div>
 
     <div class="text">
         <p><?php the_field('content_text'); ?></p>

@@ -20,8 +20,8 @@
 
             <div class="call-back-form animated">
                 <?php
-                $shortcode = get_sub_field('call_back_form_shortcode');
-                echo do_shortcode($shortcode);
+                $short_code = get_sub_field('call_back_form_shortcode');
+                echo do_shortcode($short_code);
                 ?>
             </div>
 

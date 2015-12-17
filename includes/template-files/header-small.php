@@ -22,17 +22,17 @@
 
         if(!empty($title)){
             ?>
-            <span class="headline">
+            <div class="headline">
                 <h1><?php the_field('title'); ?></h1>
-            </span>
+            </div>
             <?php
 
             if(!empty($subtitle)){
                 ?>
-                <span class="subline">
+                <div class="subline">
                     <hr/>
                     <h3><?php the_field('subtitle'); ?></h3>
-                </span>
+                </div>
                 <?php
             }
         }

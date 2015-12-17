@@ -19,8 +19,10 @@
         var waypoint = new Waypoint({
             element: document.getElementById('facts'),
             handler: function() {
-                $('.timer').countTo('start');
-                $('.timer').removeClass('timer');
+                var time = $('.timer');
+
+                time.countTo('start');
+                time.removeClass('timer');
             },
             offset: 300
         });

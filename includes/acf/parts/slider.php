@@ -33,7 +33,7 @@
             <li class="slide" style="background-image: url(<?php echo $slide['image']; ?>)">
                 <div class="overlay">
                     <div class="title-text">
-                        <span class="slide-title"><h2 class="no-margin"><?php echo $slide['title']; ?></h2></span><br/>
+                        <div class="slide-title"><h2 class="no-margin"><?php echo $slide['title']; ?></h2></div><br/>
                         <span class="slide-text"><?php echo $slide['description']; ?></span>
                         <a href="<?php echo $slide['slide_link']; ?>">
                             <span class="slide-link">
