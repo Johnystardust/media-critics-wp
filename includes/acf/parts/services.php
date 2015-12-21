@@ -45,6 +45,8 @@
 
                 <div class="text-wrapper">
                     <?php echo $service['description']; ?>
+
+                    <a href="<?php echo $service['page_link']; ?>">Lees meer</a>
                 </div>
             </div>
             <?php

@@ -9,7 +9,7 @@
  */
 ?>
 
-<div id="header-small" class="container-fluid no-padding">
+<div id="header-small" class="container-fluid no-padding" style="background-image: url('<?php the_field('image'); ?>')">
     <div class="overlay" style="color: <?php the_field('text_color'); ?>; text-shadow: <?php the_field('text_shadow_color'); ?> 1px 1px 1px;">
         <?php
         /*
@@ -38,6 +38,4 @@
         }
         ?>
     </div>
-
-    <img src="<?php the_field('image'); ?>" alt="" width="100%"/>
 </div>

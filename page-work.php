@@ -21,25 +21,17 @@ get_template_part('includes/template-files/header-small');
 
 /*
 |-----------------------------------------------------------------------------------------------------------------------
+|   Content block.
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+get_template_part('includes/template-files/content-block');
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
 |   Portfolio.
 |-----------------------------------------------------------------------------------------------------------------------
 */
 ?>
-<div class="container-fluid container-capped">
-    <div class="headline">
-        <h2 class="no-margin"><?php the_field('title_text'); ?></h2>
-        <hr/>
-    </div>
-    <div class="subline">
-        <hr/>
-        <h3><?php the_field('subtitle_text'); ?></h3>
-    </div>
-
-    <div class="text">
-        <p><?php the_field('content_text'); ?></p>
-    </div>
-</div>
-
 <div id="page-work" class="container-fluid no-padding">
     <?php
     $args = array('post_type' => 'portfolio');

@@ -27,6 +27,19 @@ html, body {
       letter-spacing: 1px;
       font-size: 18px;
       font-weight: 300; }
+    .container-capped .text ul {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      padding: 20px 0 20px 50px;
+      line-height: 32px;
+      letter-spacing: 1px; }
+    .container-capped .text .quote {
+      font-weight: 300;
+      font-style: italic;
+      line-height: 36px;
+      letter-spacing: 1px;
+      padding: 40px 0 50px 0; }
 
 .gmnoprint {
   opacity: 0; }
@@ -374,14 +387,16 @@ span {
           max-width: 50%; }
 
 #header-small {
-  max-height: 400px;
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
   overflow: hidden; }
   #header-small .overlay {
     width: 100%;
     position: absolute;
     text-align: center; }
   #header-small .headline {
-    max-width: 90%;
+    max-width: 95%;
     margin: 0 auto;
     margin-bottom: 30px; }
     #header-small .headline h1 {
@@ -674,6 +689,19 @@ span {
     font-weight: 300; }
   #services .service .text-wrapper {
     padding-left: 55px; }
+
+#services-menu .button-black {
+  width: 100%;
+  display: block;
+  border-left: none; }
+  #services-menu .button-black .button-inner {
+    display: table;
+    width: 100%;
+    height: 100%; }
+#services-menu .active .button-black .txt {
+  color: #ffffff; }
+#services-menu .active .button-black .bg {
+  width: 100%; }
 
 #text-title-subtitle .text {
   max-width: 60%;

@@ -26,6 +26,7 @@ else {
                 <li><?php the_field('address', 'option'); ?></li>
                 <li><?php the_field('postal', 'option'); ?></li>
                 <li><a href="mailto:info@media-critics.nl"><i class="icon icon-post"></i><?php the_field('mail', 'option'); ?></a></li>
+
             </ul>
         </div>
 
